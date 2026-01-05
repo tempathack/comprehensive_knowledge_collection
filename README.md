@@ -17,11 +17,10 @@ A portfolio-style knowledge base for computer science and software engineering t
   - Fundamentals, web/network security, secure coding, best practices.
 - Frontend: `frontend/`
   - Framework comparisons and usage (React/Next.js/Vue/Svelte), TS, testing, perf, accessibility.
-- Runnable demos: `projects/`
 
 ## How to Use
 - Start with `CKC_REGISTER.ipynb` to browse all topics.
-- Prefer notebooks for learning; use `projects/` when you want something runnable end-to-end.
+- Prefer notebooks for learning; keep any optional runnable code inside the relevant topic folder.
 
 ## Index (auto-generated)
 
