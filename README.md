@@ -31,6 +31,8 @@ A portfolio-style knowledge base for computer science and software engineering t
   - **Supervised Learning**
     - **Linear Regression And Co**
       - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/linear_regression_and_co/00_overview.ipynb)
+    - **Tree Based Algorithms**
+      - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tree_based_algorithms/00_overview.ipynb)
 
 ### Backend
 
