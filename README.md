@@ -29,22 +29,23 @@ A portfolio-style knowledge base for computer science and software engineering t
 ### Data Science
 - **Machine Learning**
   - **Supervised Learning**
-    - **Gaussian Processes**
-      - [Gaussian Processes (GP) — Regression & Probabilistic Classification](data_science/machine_learning/supervised_learning/gaussian_processes/00_overview.ipynb)
-    - **Generalized Linear Models**
-      - [Generalized Linear Models (GLMs)](data_science/machine_learning/supervised_learning/generalized_linear_models/00_overview.ipynb)
-    - **K Nearest Neighbors**
-      - [K-Nearest Neighbors (KNN) — Classification & Regression (From Scratch)](data_science/machine_learning/supervised_learning/k_nearest_neighbors/00_overview.ipynb)
-    - **Linear And Quadratic Discriminant Analysis**
-      - [Linear and Quadratic Discriminant Analysis (LDA / QDA)](data_science/machine_learning/supervised_learning/linear_and_quadratic_discriminant_analysis/00_overview.ipynb)
-    - **Linear Regression And Co**
-      - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/linear_regression_and_co/00_overview.ipynb)
-    - **Naive Bayes**
-      - [Naive Bayes (Gaussian, Multinomial, Complement, Bernoulli, Categorical) + Out-of-core](data_science/machine_learning/supervised_learning/naive_bayes/00_overview.ipynb)
-    - **Support Vector Machines**
-      - [Support Vector Machines (SVC + SVR)](data_science/machine_learning/supervised_learning/support_vector_machines/00_overview.ipynb)
-    - **Tree Based Algorithms**
-      - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tree_based_algorithms/00_overview.ipynb)
+    - **Tabular Data**
+      - **Gaussian Processes**
+        - [Gaussian Processes (GP) — Regression & Probabilistic Classification](data_science/machine_learning/supervised_learning/tabular_data/gaussian_processes/00_overview.ipynb)
+      - **Generalized Linear Models**
+        - [Generalized Linear Models (GLMs)](data_science/machine_learning/supervised_learning/tabular_data/generalized_linear_models/00_overview.ipynb)
+      - **K Nearest Neighbors**
+        - [K-Nearest Neighbors (KNN) — Classification & Regression (From Scratch)](data_science/machine_learning/supervised_learning/tabular_data/k_nearest_neighbors/00_overview.ipynb)
+      - **Linear And Quadratic Discriminant Analysis**
+        - [Linear and Quadratic Discriminant Analysis (LDA / QDA)](data_science/machine_learning/supervised_learning/tabular_data/linear_and_quadratic_discriminant_analysis/00_overview.ipynb)
+      - **Linear Regression And Co**
+        - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/tabular_data/linear_regression_and_co/00_overview.ipynb)
+      - **Naive Bayes**
+        - [Naive Bayes (Gaussian, Multinomial, Complement, Bernoulli, Categorical) + Out-of-core](data_science/machine_learning/supervised_learning/tabular_data/naive_bayes/00_overview.ipynb)
+      - **Support Vector Machines**
+        - [Support Vector Machines (SVC + SVR)](data_science/machine_learning/supervised_learning/tabular_data/support_vector_machines/00_overview.ipynb)
+      - **Tree Based Algorithms**
+        - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tabular_data/tree_based_algorithms/00_overview.ipynb)
 
 ### Backend
 
