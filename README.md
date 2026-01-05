@@ -27,6 +27,9 @@ A portfolio-style knowledge base for computer science and software engineering t
 <!-- CKC_INDEX_START -->
 
 ### Data Science
+- **Machine Learning**
+  - **Linear Regression And Co**
+    - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/linear_regression_and_co/00_overview.ipynb)
 
 ### Backend
 
