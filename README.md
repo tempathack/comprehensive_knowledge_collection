@@ -31,8 +31,12 @@ A portfolio-style knowledge base for computer science and software engineering t
   - **Supervised Learning**
     - **Gaussian Processes**
       - [Gaussian Processes (GP) — Regression & Probabilistic Classification](data_science/machine_learning/supervised_learning/gaussian_processes/00_overview.ipynb)
+    - **Generalized Linear Models**
+      - [Generalized Linear Models (GLMs)](data_science/machine_learning/supervised_learning/generalized_linear_models/00_overview.ipynb)
     - **K Nearest Neighbors**
       - [K-Nearest Neighbors (KNN) — Classification & Regression (From Scratch)](data_science/machine_learning/supervised_learning/k_nearest_neighbors/00_overview.ipynb)
+    - **Linear And Quadratic Discriminant Analysis**
+      - [Linear and Quadratic Discriminant Analysis (LDA / QDA)](data_science/machine_learning/supervised_learning/linear_and_quadratic_discriminant_analysis/00_overview.ipynb)
     - **Linear Regression And Co**
       - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/linear_regression_and_co/00_overview.ipynb)
     - **Naive Bayes**
