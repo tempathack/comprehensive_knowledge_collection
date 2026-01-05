@@ -29,6 +29,8 @@ A portfolio-style knowledge base for computer science and software engineering t
 ### Data Science
 - **Machine Learning**
   - **Supervised Learning**
+    - **K Nearest Neighbors**
+      - [K-Nearest Neighbors (KNN) — Classification & Regression (From Scratch)](data_science/machine_learning/supervised_learning/k_nearest_neighbors/00_overview.ipynb)
     - **Linear Regression And Co**
       - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/linear_regression_and_co/00_overview.ipynb)
     - **Tree Based Algorithms**
