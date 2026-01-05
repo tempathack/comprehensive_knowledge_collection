@@ -28,6 +28,24 @@ A portfolio-style knowledge base for computer science and software engineering t
 
 ### Data Science
 - **Machine Learning**
+  - **Dimensionality Reduction**
+    - **Tabular Data**
+      - **Dbscan**
+        - [DBSCAN — Density-Based Clustering (Finding crowds instead of shapes)](data_science/machine_learning/dimensionality_reduction/tabular_data/dbscan/00_overview.ipynb)
+      - **Ica**
+        - [Independent Component Analysis (ICA)](data_science/machine_learning/dimensionality_reduction/tabular_data/ica/00_overview.ipynb)
+      - **Isomap**
+        - [Isomap — Nonlinear Dimensionality Reduction (Geodesic Distances)](data_science/machine_learning/dimensionality_reduction/tabular_data/isomap/00_overview.ipynb)
+      - **Lle**
+        - [Locally Linear Embedding (LLE) — Manifold Learning (From Scratch)](data_science/machine_learning/dimensionality_reduction/tabular_data/lle/00_overview.ipynb)
+      - **Mds**
+        - [Multidimensional Scaling (MDS) — “Recreating a map using only pairwise distances”](data_science/machine_learning/dimensionality_reduction/tabular_data/mds/00_overview.ipynb)
+      - **Pca**
+        - [Principal Component Analysis (PCA) + Kernel PCA](data_science/machine_learning/dimensionality_reduction/tabular_data/pca/00_overview.ipynb)
+      - **Tsne**
+        - [t-SNE: Visualizing High-Dimensional Data (Preserve Friendships, Not Geography)](data_science/machine_learning/dimensionality_reduction/tabular_data/tsne/00_overview.ipynb)
+      - **Umap**
+        - [UMAP (Uniform Manifold Approximation and Projection)](data_science/machine_learning/dimensionality_reduction/tabular_data/umap/00_overview.ipynb)
   - **Supervised Learning**
     - **Tabular Data**
       - **Gaussian Processes**
