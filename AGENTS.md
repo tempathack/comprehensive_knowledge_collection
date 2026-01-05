@@ -3,7 +3,7 @@
 ## Summary
 This repository is a long-lived, portfolio-style knowledge base for computer science and software engineering topics. The default format is **Jupyter notebooks** (explanations + visuals + runnable code). When a topic needs “real” structure (servers, infra, apps), it lives in a small, self-contained **code project** under `projects/`.
 
-Primary sections (mirrored in `notebooks/` and optionally in `projects/`):
+Primary sections (top-level directories; notebooks live directly in subtopic folders):
 - **Data Science**: statistics, ML, algorithms, deep learning, time series, NLP; emphasis on *intuition + plots* and “from-scratch” NumPy implementations alongside practical library usage.
 - **DevOps**: common architectures and tradeoffs, containers/Kubernetes, cloud fundamentals, CI/CD, observability/SRE, and Infrastructure-as-Code (Terraform, etc.).
 - **Backend**: FastAPI-focused patterns (validation, dependency injection, auth, testing, async, databases, background jobs), plus broader API and system design fundamentals.
@@ -12,10 +12,11 @@ Primary sections (mirrored in `notebooks/` and optionally in `projects/`):
 
 ## Repository Layout
 - `README.md`: GitHub-facing overview + navigation.
-- `notebooks/`: the main knowledge base (Jupyter-first).
+- `data_science/`, `devops/`, `backend/`, `cybersecurity/`, `frontend/`: the main knowledge base (Jupyter-first).
 - `projects/`: runnable codebases (FastAPI apps, Terraform modules, frontend demos, etc.).
 - `docs/`: lightweight Markdown checklists, glossaries, reading lists, and “index” pages when notebooks are too heavy.
 - `assets/`: images/diagrams used by notebooks/docs.
+- `_templates/`: notebook templates to copy when starting new topics.
 
 ## Notebook Conventions
 - **Naming**: use two-digit ordering + snake_case, e.g. `01_linear_regression_from_scratch.ipynb`.
@@ -42,4 +43,3 @@ Primary sections (mirrored in `notebooks/` and optionally in `projects/`):
 ## Content Safety (Cybersecurity)
 - No real secrets, tokens, or personal data in repo history.
 - Keep examples legal/safe: prefer local targets (containers, toy apps, intentionally vulnerable sandboxes).
-

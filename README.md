@@ -3,15 +3,15 @@
 A portfolio-style knowledge base for computer science and software engineering topics, primarily as **Jupyter notebooks** (explanations + visuals + runnable code), with small **code projects** where needed (APIs, infrastructure, demos).
 
 ## Contents
-- Data Science: `notebooks/data_science/`
+- Data Science: `data_science/`
   - Statistics, ML, algorithms, deep learning — with “from-scratch” NumPy + practical usage.
-- DevOps: `notebooks/devops/`
+- DevOps: `devops/`
   - Architectures, cloud, containers/K8s, CI/CD, observability, IaC (Terraform).
-- Backend: `notebooks/backend/`
+- Backend: `backend/`
   - FastAPI patterns + broader API/system design topics.
-- Cybersecurity: `notebooks/cybersecurity/`
+- Cybersecurity: `cybersecurity/`
   - Fundamentals, web/network security, secure coding, best practices.
-- Frontend: `notebooks/frontend/`
+- Frontend: `frontend/`
   - Framework comparisons and usage (React/Next.js/Vue/Svelte), TS, testing, perf, accessibility.
 - Runnable demos: `projects/`
 
@@ -21,4 +21,3 @@ A portfolio-style knowledge base for computer science and software engineering t
 
 ## Git Remote
 Target repository: `https://github.com/tempathack/comprehensive_knowledge_collection.git`
-
