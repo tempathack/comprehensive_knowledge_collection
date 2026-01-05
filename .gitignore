@@ -35,8 +35,3 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
-
-# Data / artifacts (keep data docs via negation)
-data/**
-!data/README.md
-

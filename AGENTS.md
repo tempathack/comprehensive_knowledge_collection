@@ -11,12 +11,11 @@ Primary sections (top-level directories; notebooks live directly in subtopic fol
 - **Frontend**: HTML/CSS/JS/TS foundations, framework comparisons (React/Next.js/Vue/Svelte), state management, testing, performance, and accessibility.
 
 ## Repository Layout
-- `README.md`: GitHub-facing overview + navigation.
-- `data_science/`, `devops/`, `backend/`, `cybersecurity/`, `frontend/`: the main knowledge base (Jupyter-first).
+- `CKC_REGISTER.ipynb`: main register notebook that auto-generates the index.
+- `README.md`: GitHub-facing overview + auto-generated index block.
+- `data_science/`, `devops/`, `backend/`, `cybersecurity/`, `frontend/`: the main knowledge base.
 - `projects/`: runnable codebases (FastAPI apps, Terraform modules, frontend demos, etc.).
-- `docs/`: lightweight Markdown checklists, glossaries, reading lists, and “index” pages when notebooks are too heavy.
-- `assets/`: images/diagrams used by notebooks/docs.
-- `_templates/`: notebook templates to copy when starting new topics.
+- `_templates/`: optional notebook templates to copy when starting new topics.
 
 ## Notebook Conventions
 - **Naming**: use two-digit ordering + snake_case, e.g. `01_linear_regression_from_scratch.ipynb`.
@@ -31,6 +30,11 @@ Primary sections (top-level directories; notebooks live directly in subtopic fol
   - Exercises + references
 - **Reproducibility**: set seeds, pin/record versions when results depend on them, avoid hidden state.
 - **Plots**: label axes/units, annotate key takeaways, keep figures readable.
+
+## Folder Rule (Leaf Topics)
+- Every “final” (leaf) folder should contain at least one notebook.
+- Recommended: keep a `00_overview.ipynb` per leaf folder, then add numbered topic notebooks.
+- `CKC_REGISTER.ipynb` can auto-create missing `00_overview.ipynb` files for leaf folders.
 
 ## Project Conventions (`projects/`)
 - Each project should be runnable from its folder and include a short `README.md` with:
