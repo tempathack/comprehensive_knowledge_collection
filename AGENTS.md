@@ -29,6 +29,7 @@ Primary sections (top-level directories; notebooks live directly in subtopic fol
   - Exercises + references
 - **Reproducibility**: set seeds, pin/record versions when results depend on them, avoid hidden state.
 - **Plots**: label axes/units, annotate key takeaways, keep figures readable.
+  - For Plotly notebooks, set `pio.renderers.default = "notebook"` in the first import/config cell.
 
 ## Folder Rule (Leaf Topics)
 - Every “final” (leaf) folder should contain at least one notebook.
