@@ -29,10 +29,16 @@ A portfolio-style knowledge base for computer science and software engineering t
 ### Data Science
 - **Machine Learning**
   - **Supervised Learning**
+    - **Gaussian Processes**
+      - [Gaussian Processes (GP) — Regression & Probabilistic Classification](data_science/machine_learning/supervised_learning/gaussian_processes/00_overview.ipynb)
     - **K Nearest Neighbors**
       - [K-Nearest Neighbors (KNN) — Classification & Regression (From Scratch)](data_science/machine_learning/supervised_learning/k_nearest_neighbors/00_overview.ipynb)
     - **Linear Regression And Co**
       - [Linear Regression & Friends (OLS, Ridge, Lasso, Elastic Net)](data_science/machine_learning/supervised_learning/linear_regression_and_co/00_overview.ipynb)
+    - **Naive Bayes**
+      - [Naive Bayes (Gaussian, Multinomial, Complement, Bernoulli, Categorical) + Out-of-core](data_science/machine_learning/supervised_learning/naive_bayes/00_overview.ipynb)
+    - **Support Vector Machines**
+      - [Support Vector Machines (SVC + SVR)](data_science/machine_learning/supervised_learning/support_vector_machines/00_overview.ipynb)
     - **Tree Based Algorithms**
       - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tree_based_algorithms/00_overview.ipynb)
 
