@@ -76,6 +76,29 @@ A portfolio-style knowledge base for computer science and software engineering t
         - [Support Vector Machines (SVC + SVR)](data_science/machine_learning/supervised_learning/tabular_data/support_vector_machines/00_overview.ipynb)
       - **Tree Based Algorithms**
         - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tabular_data/tree_based_algorithms/00_overview.ipynb)
+- **Reinforcement Learning**
+  - **ACKTR**
+    - [ACKTR (Actor–Critic using Kronecker-Factored Trust Region)](data_science/reinforcement_learning/ACKTR/00_overview.ipynb)
+    - [ACKTR from scratch (low-level PyTorch) — CartPole-v1](data_science/reinforcement_learning/ACKTR/01_acktr_from_scratch.ipynb)
+  - **DDPG**
+    - [DDPG (Deep Deterministic Policy Gradient) — Continuous Control](data_science/reinforcement_learning/DDPG/00_overview.ipynb)
+    - [DDPG (Deep Deterministic Policy Gradient) — from scratch in PyTorch](data_science/reinforcement_learning/DDPG/01_ddpg_from_scratch.ipynb)
+  - **DQN**
+    - [Deep Q-Networks (DQN) for Discrete Action Spaces — Low-Level PyTorch](data_science/reinforcement_learning/DQN/00_overview.ipynb)
+  - **GAIL**
+    - [Generative Adversarial Imitation Learning (GAIL) — low-level PyTorch](data_science/reinforcement_learning/GAIL/00_overview.ipynb)
+  - **HER**
+    - [Hindsight Experience Replay (HER) — low-level PyTorch (DDPG) in a goal-based environment](data_science/reinforcement_learning/HER/00_overview.ipynb)
+  - **PPO1**
+    - [PPO1 (PPO-Clip) — low-level PyTorch implementation](data_science/reinforcement_learning/PPO1/00_overview.ipynb)
+  - **PPO2**
+    - [Proximal Policy Optimization 2 (PPO2) — from scratch in PyTorch](data_science/reinforcement_learning/PPO2/00_overview.ipynb)
+  - **SAC**
+    - [Soft Actor-Critic (SAC) for Continuous Action Spaces (low-level PyTorch)](data_science/reinforcement_learning/SAC/00_overview.ipynb)
+  - **TD3**
+    - [Twin Delayed DDPG (TD3) — from scratch in PyTorch](data_science/reinforcement_learning/TD3/00_overview.ipynb)
+  - **TRPO**
+    - [TRPO (Trust Region Policy Optimization) — low-level PyTorch implementation](data_science/reinforcement_learning/TRPO/00_overview.ipynb)
 
 ### Backend
 
