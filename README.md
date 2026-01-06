@@ -27,6 +27,18 @@ A portfolio-style knowledge base for computer science and software engineering t
 <!-- CKC_INDEX_START -->
 
 ### Data Science
+- **Deeplearning**
+  - **Tabular Data**
+    - **Artificial Neural Networks**
+      - [Artificial Neural Networks (MLPs) for Tabular Data](data_science/deeplearning/tabular_data/artificial_neural_networks/00_overview.ipynb)
+  - **Timeseries**
+    - **Lstm And Gru**
+      - [LSTM and GRU for Time Series Forecasting (from scratch + PyTorch)](data_science/deeplearning/timeseries/lstm_and_gru/00_overview.ipynb)
+  - **Visual**
+    - **Cnn**
+      - [Convolutional Neural Networks (CNNs) for Image Data (from scratch NumPy + PyTorch)](data_science/deeplearning/visual/cnn/00_overview.ipynb)
+    - **Resnet**
+      - [Residual Networks (ResNets) for Image Data (from scratch NumPy + PyTorch)](data_science/deeplearning/visual/resnet/00_overview.ipynb)
 - **Machine Learning**
   - **Dimensionality Reduction**
     - **Tabular Data**
@@ -70,6 +82,48 @@ A portfolio-style knowledge base for computer science and software engineering t
 ### Frontend
 
 ### DevOps
+- **Cloud**
+  - **Aws**
+    - **Cloudformation**
+      - [AWS CloudFormation](devops/cloud/aws/cloudformation/00_overview.ipynb)
+    - **Cloudfront**
+      - [AWS CloudFront](devops/cloud/aws/cloudfront/00_overview.ipynb)
+    - **Cloudwatch**
+      - [Amazon CloudWatch](devops/cloud/aws/cloudwatch/00_overview.ipynb)
+    - **Dynamodb**
+      - [Amazon DynamoDB](devops/cloud/aws/dynamodb/00_overview.ipynb)
+    - **Ec2**
+      - [Amazon EC2 (Elastic Compute Cloud)](devops/cloud/aws/ec2/00_overview.ipynb)
+    - **Ecs**
+      - [Amazon ECS (Elastic Container Service)](devops/cloud/aws/ecs/00_overview.ipynb)
+    - **Eks**
+      - [Amazon EKS (Elastic Kubernetes Service)](devops/cloud/aws/eks/00_overview.ipynb)
+    - **Elasticache**
+      - [Amazon ElastiCache](devops/cloud/aws/elasticache/00_overview.ipynb)
+    - **Emr**
+      - [Amazon EMR (Elastic MapReduce)](devops/cloud/aws/emr/00_overview.ipynb)
+    - **Eventbridge**
+      - [Amazon EventBridge](devops/cloud/aws/eventbridge/00_overview.ipynb)
+    - **Glue**
+      - [AWS Glue](devops/cloud/aws/glue/00_overview.ipynb)
+    - **Lambda**
+      - [AWS Lambda](devops/cloud/aws/lambda/00_overview.ipynb)
+    - **Mwaa**
+      - [AWS Managed Workflows for Apache Airflow (MWAA)](devops/cloud/aws/mwaa/00_overview.ipynb)
+    - **Rds**
+      - [Amazon RDS (Relational Database Service)](devops/cloud/aws/rds/00_overview.ipynb)
+    - **S3**
+      - [Amazon S3 (Simple Storage Service)](devops/cloud/aws/s3/00_overview.ipynb)
+    - **Snowflake**
+      - [Snowflake (Cloud Data Platform)](devops/cloud/aws/snowflake/00_overview.ipynb)
+    - **Sns**
+      - [Amazon SNS (Simple Notification Service)](devops/cloud/aws/sns/00_overview.ipynb)
+    - **Sqs**
+      - [Amazon SQS (Simple Queue Service)](devops/cloud/aws/sqs/00_overview.ipynb)
+    - **Step Functions**
+      - [AWS Step Functions](devops/cloud/aws/step_functions/00_overview.ipynb)
+    - **Vpc**
+      - [Amazon VPC (Virtual Private Cloud)](devops/cloud/aws/vpc/00_overview.ipynb)
 
 ### Cybersecurity
 
