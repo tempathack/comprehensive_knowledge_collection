@@ -77,6 +77,8 @@ A portfolio-style knowledge base for computer science and software engineering t
       - **Tree Based Algorithms**
         - [Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)](data_science/machine_learning/supervised_learning/tabular_data/tree_based_algorithms/00_overview.ipynb)
 - **Reinforcement Learning**
+  - **A2C**
+    - [A2C (Advantage Actor-Critic) — Low-Level PyTorch Implementation (CartPole-v1)](data_science/reinforcement_learning/A2C/00_overview.ipynb)
   - **ACKTR**
     - [ACKTR (Actor–Critic using Kronecker-Factored Trust Region)](data_science/reinforcement_learning/ACKTR/00_overview.ipynb)
     - [ACKTR from scratch (low-level PyTorch) — CartPole-v1](data_science/reinforcement_learning/ACKTR/01_acktr_from_scratch.ipynb)
