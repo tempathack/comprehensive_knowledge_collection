@@ -479,19 +479,65 @@ A portfolio-style knowledge base for computer science and software engineering t
           - [Zipfian distribution (`zipfian`)](data_science/statistics/distributions/01_common_distributions/discret/zipfian/overview.ipynb)
     - **02 Distribution Fitting Mle Qq**
       - [02 Distribution Fitting Mle Qq](data_science/statistics/distributions/02_distribution_fitting_mle_qq/00_overview.ipynb)
-  - **Hypothesis Testing**
-    - **01 Core Concepts P Values Power**
-      - [01 Core Concepts P Values Power](data_science/statistics/hypothesis_testing/01_core_concepts_p_values_power/00_overview.ipynb)
-    - **02 Parametric Tests T Z Chi2**
-      - [02 Parametric Tests T Z Chi2](data_science/statistics/hypothesis_testing/02_parametric_tests_t_z_chi2/00_overview.ipynb)
-    - **03 Nonparametric Tests Rank Based**
-      - [03 Nonparametric Tests Rank Based](data_science/statistics/hypothesis_testing/03_nonparametric_tests_rank_based/00_overview.ipynb)
-    - **04 Anova And F Tests**
-      - [04 Anova And F Tests](data_science/statistics/hypothesis_testing/04_anova_and_f_tests/00_overview.ipynb)
-    - **05 Kolmogorov Smirnov Tests**
-      - [05 Kolmogorov Smirnov Tests](data_science/statistics/hypothesis_testing/05_kolmogorov_smirnov_tests/00_overview.ipynb)
-    - **06 Multiple Testing Bh Bonferroni**
-      - [06 Multiple Testing Bh Bonferroni](data_science/statistics/hypothesis_testing/06_multiple_testing_bh_bonferroni/00_overview.ipynb)
+  - **Hypothesis Testing And Other**
+    - **Anderson Darling**
+      - [Anderson–Darling Test (Goodness-of-Fit / Normality)](data_science/statistics/hypothesis_testing_and_other/anderson_darling/overview.ipynb)
+    - **Anova**
+      - [ANOVA (One-Way): Analysis of Variance from Scratch (NumPy)](data_science/statistics/hypothesis_testing_and_other/anova/overview.ipynb)
+    - **Bartlett**
+      - [Bartlett’s test (homogeneity of variances)](data_science/statistics/hypothesis_testing_and_other/bartlett/overview.ipynb)
+    - **Bootstrap**
+      - [Bootstrap Hypothesis Testing (from scratch)](data_science/statistics/hypothesis_testing_and_other/bootstrap/overview.ipynb)
+    - **Chi Square**
+      - [Chi-square Tests (Goodness-of-Fit & Independence)](data_science/statistics/hypothesis_testing_and_other/chi_square/overview.ipynb)
+    - **Chi Square Goodness Of Fit**
+      - [Chi-square goodness-of-fit test (χ² GOF)](data_science/statistics/hypothesis_testing_and_other/chi_square_goodness_of_fit/overview.ipynb)
+    - **Dagostino K2**
+      - [D'Agostino's $K^2$ normality test (`dagostino_k2`)](data_science/statistics/hypothesis_testing_and_other/dagostino_k2/overview.ipynb)
+    - **Dunnett**
+      - [Dunnett’s Test — Multiple Comparisons vs a Control](data_science/statistics/hypothesis_testing_and_other/dunnett/overview.ipynb)
+    - **F Test**
+      - [F-test (Variance Ratio Test)](data_science/statistics/hypothesis_testing_and_other/f_test/overview.ipynb)
+    - **Fisher Exact**
+      - [Fisher’s Exact Test (2×2) — Intuition + NumPy Implementation](data_science/statistics/hypothesis_testing_and_other/fisher_exact/00_overview.ipynb)
+    - **Fligner Killeen**
+      - [Fligner–Killeen Test (robust test for equal variances)](data_science/statistics/hypothesis_testing_and_other/fligner_killeen/overview.ipynb)
+    - **Friedman**
+      - [Friedman Test (Nonparametric Repeated-Measures ANOVA)](data_science/statistics/hypothesis_testing_and_other/friedman/overview.ipynb)
+    - **Jarque Bera**
+      - [Jarque–Bera normality test (`jarque_bera`)](data_science/statistics/hypothesis_testing_and_other/jarque_bera/overview.ipynb)
+    - **Kendall Tau**
+      - [Kendall’s Tau (Rank Correlation) — Measure + Hypothesis Test](data_science/statistics/hypothesis_testing_and_other/kendall_tau/overview.ipynb)
+    - **Kolmogorov Smirnov**
+      - [Kolmogorov–Smirnov (KS) test (one-sample + two-sample)](data_science/statistics/hypothesis_testing_and_other/kolmogorov_smirnov/overview.ipynb)
+    - **Kruskal Wallis**
+      - [Kruskal–Wallis H test (one-way ANOVA on ranks) — from scratch](data_science/statistics/hypothesis_testing_and_other/kruskal_wallis/overview.ipynb)
+    - **Kurtosis Test**
+      - [Kurtosis Test (Anscombe–Glynn)](data_science/statistics/hypothesis_testing_and_other/kurtosis_test/00_overview.ipynb)
+    - **Levene**
+      - [Levene’s Test (Homogeneity of Variances)](data_science/statistics/hypothesis_testing_and_other/levene/overview.ipynb)
+    - **Mann Whitney U**
+      - [Mann–Whitney U Test (Wilcoxon Rank-Sum) — From Scratch with NumPy](data_science/statistics/hypothesis_testing_and_other/mann_whitney_u/00_overview.ipynb)
+    - **Odds Ratio**
+      - [Odds Ratio: Interpretation + Hypothesis Test (2×2 tables)](data_science/statistics/hypothesis_testing_and_other/odds_ratio/overview.ipynb)
+    - **Pearson**
+      - [Pearson correlation test (Pearson's r)](data_science/statistics/hypothesis_testing_and_other/pearson/overview.ipynb)
+    - **Permutation Test**
+      - [Permutation Test (Randomization Test)](data_science/statistics/hypothesis_testing_and_other/permutation_test/overview.ipynb)
+    - **Skewness Test**
+      - [Skewness Test (D'Agostino)](data_science/statistics/hypothesis_testing_and_other/skewness_test/overview.ipynb)
+    - **Spearman**
+      - [Spearman Rank Correlation Test (Spearman’s ρ)](data_science/statistics/hypothesis_testing_and_other/spearman/overview.ipynb)
+    - **T Test**
+      - [Student's t-test (one-sample, paired, two-sample)](data_science/statistics/hypothesis_testing_and_other/t_test/overview.ipynb)
+      - **T Test Independent**
+        - [Independent two-sample t-test (`t_test_independent`)](data_science/statistics/hypothesis_testing_and_other/t_test/t_test_independent/overview.ipynb)
+      - **T Test Paired**
+        - [Paired t-test (`ttest_rel`) — comparing means with paired data](data_science/statistics/hypothesis_testing_and_other/t_test/t_test_paired/overview.ipynb)
+    - **T Test One Sample**
+      - [One-sample t-test (Student’s t-test)](data_science/statistics/hypothesis_testing_and_other/t_test_one_sample/overview.ipynb)
+    - **Wilcoxon Signed Rank**
+      - [Wilcoxon Signed-Rank Test (paired, nonparametric)](data_science/statistics/hypothesis_testing_and_other/wilcoxon_signed_rank/overview.ipynb)
   - **Inference**
     - **01 Point Estimation Mle Map Mom**
       - [01 Point Estimation Mle Map Mom](data_science/statistics/inference/01_point_estimation_mle_map_mom/00_overview.ipynb)
@@ -516,6 +562,18 @@ A portfolio-style knowledge base for computer science and software engineering t
 ### Frontend
 
 ### DevOps
+- **CI CD**
+  - **Argo Cd**
+    - [Argo CD (GitOps Continuous Delivery for Kubernetes)](devops/CI_CD/argo_cd/00_overview.ipynb)
+  - **Github Actions**
+    - [GitHub Actions (CI/CD)](devops/CI_CD/github_actions/00_overview.ipynb)
+  - **Jenkins**
+    - [Jenkins (CI/CD)](devops/CI_CD/jenkins/00_overview.ipynb)
+- **IAC**
+  - **Pulumi**
+    - [Pulumi (Infrastructure as Code with real languages)](devops/IAC/pulumi/00_overview.ipynb)
+  - **Terraform**
+    - [Terraform (Infrastructure as Code)](devops/IAC/terraform/00_overview.ipynb)
 - **Cloud**
   - **Aws**
     - **Cloudformation**
@@ -558,6 +616,55 @@ A portfolio-style knowledge base for computer science and software engineering t
       - [AWS Step Functions](devops/cloud/aws/step_functions/00_overview.ipynb)
     - **Vpc**
       - [Amazon VPC (Virtual Private Cloud)](devops/cloud/aws/vpc/00_overview.ipynb)
+- **Containerisation**
+  - **Docker**
+    - [Docker (Containerisation)](devops/containerisation/docker/00_overview.ipynb)
+  - **Podman**
+    - [Podman (Containerisation)](devops/containerisation/podman/00_overview.ipynb)
+- **Kubernetes**
+  - [Kubernetes](devops/kubernetes/00_overview.ipynb)
+  - **Config Maps**
+    - [ConfigMaps](devops/kubernetes/config_maps/00_overview.ipynb)
+  - **Cron Jobs**
+    - [CronJobs](devops/kubernetes/cron_jobs/00_overview.ipynb)
+  - **Deployments**
+    - [Deployments (Stateless workloads)](devops/kubernetes/deployments/00_overview.ipynb)
+  - **Hpa**
+    - [HPA (Horizontal Pod Autoscaler)](devops/kubernetes/hpa/00_overview.ipynb)
+  - **Ingress**
+    - [Ingress](devops/kubernetes/ingress/00_overview.ipynb)
+  - **Jobs**
+    - [Jobs](devops/kubernetes/jobs/00_overview.ipynb)
+  - **Kustomize**
+    - [Kustomize (manage YAML at scale)](devops/kubernetes/kustomize/00_overview.ipynb)
+  - **Namespaces**
+    - [Namespaces](devops/kubernetes/namespaces/00_overview.ipynb)
+  - **Persistent Volume Claims**
+    - [Persistent Volumes (PV) & PersistentVolumeClaims (PVC)](devops/kubernetes/persistent_volume_claims/00_overview.ipynb)
+  - **Pods**
+    - [Pods](devops/kubernetes/pods/00_overview.ipynb)
+  - **Replica Sets**
+    - [ReplicaSets (Replicas)](devops/kubernetes/replica_sets/00_overview.ipynb)
+  - **Secrets**
+    - [Secrets](devops/kubernetes/secrets/00_overview.ipynb)
+  - **Services**
+    - [Services](devops/kubernetes/services/00_overview.ipynb)
+  - **Stateful Sets**
+    - [StatefulSets (Stateful workloads)](devops/kubernetes/stateful_sets/00_overview.ipynb)
+  - **Storage Classes**
+    - [StorageClasses](devops/kubernetes/storage_classes/00_overview.ipynb)
+- **Telemetry And Display**
+  - [Telemetry & Display (Observability)](devops/telemetry_and_display/00_overview.ipynb)
+  - **Elasticsearch**
+    - [Elasticsearch](devops/telemetry_and_display/elasticsearch/00_overview.ipynb)
+  - **Grafana**
+    - [Grafana](devops/telemetry_and_display/grafana/00_overview.ipynb)
+  - **Kibana**
+    - [Kibana](devops/telemetry_and_display/kibana/00_overview.ipynb)
+  - **Logstash**
+    - [Logstash](devops/telemetry_and_display/logstash/00_overview.ipynb)
+  - **Prometheus**
+    - [Prometheus](devops/telemetry_and_display/prometheus/00_overview.ipynb)
 
 ### Cybersecurity
 
