@@ -39,6 +39,27 @@ A portfolio-style knowledge base for computer science and software engineering t
       - [Convolutional Neural Networks (CNNs) for Image Data (from scratch NumPy + PyTorch)](data_science/deeplearning/visual/cnn/00_overview.ipynb)
     - **Resnet**
       - [Residual Networks (ResNets) for Image Data (from scratch NumPy + PyTorch)](data_science/deeplearning/visual/resnet/00_overview.ipynb)
+- **Linear Algebra**
+  - **Foundations**
+    - **01 Vectors Norms Inner Products**
+      - [01 Vectors Norms Inner Products](data_science/linear_algebra/foundations/01_vectors_norms_inner_products/00_overview.ipynb)
+    - **02 Orthogonality Projections**
+      - [02 Orthogonality Projections](data_science/linear_algebra/foundations/02_orthogonality_projections/00_overview.ipynb)
+  - **Least Squares**
+    - **01 Least Squares Qr Svd**
+      - [01 Least Squares Qr Svd](data_science/linear_algebra/least_squares/01_least_squares_qr_svd/00_overview.ipynb)
+  - **Linear Systems**
+    - **01 Gaussian Elimination Lu**
+      - [01 Gaussian Elimination Lu](data_science/linear_algebra/linear_systems/01_gaussian_elimination_lu/00_overview.ipynb)
+    - **02 Conditioning And Stability**
+      - [02 Conditioning And Stability](data_science/linear_algebra/linear_systems/02_conditioning_and_stability/00_overview.ipynb)
+  - **Matrix Factorizations**
+    - **01 Qr Decomposition**
+      - [01 Qr Decomposition](data_science/linear_algebra/matrix_factorizations/01_qr_decomposition/00_overview.ipynb)
+    - **02 Svd**
+      - [02 Svd](data_science/linear_algebra/matrix_factorizations/02_svd/00_overview.ipynb)
+    - **03 Eigendecomposition**
+      - [03 Eigendecomposition](data_science/linear_algebra/matrix_factorizations/03_eigendecomposition/00_overview.ipynb)
 - **Machine Learning**
   - **Dimensionality Reduction**
     - **Tabular Data**
@@ -58,6 +79,148 @@ A portfolio-style knowledge base for computer science and software engineering t
         - [t-SNE: Visualizing High-Dimensional Data (Preserve Friendships, Not Geography)](data_science/machine_learning/dimensionality_reduction/tabular_data/tsne/00_overview.ipynb)
       - **Umap**
         - [UMAP (Uniform Manifold Approximation and Projection)](data_science/machine_learning/dimensionality_reduction/tabular_data/umap/00_overview.ipynb)
+  - **Metrics**
+    - **Tabular**
+      - **Classification**
+        - [Classification Metrics (Tabular)](data_science/machine_learning/metrics/tabular/classification/00_overview.ipynb)
+        - **Accuracy Score**
+          - [`accuracy_score` (classification accuracy)](data_science/machine_learning/metrics/tabular/classification/accuracy_score/00_overview.ipynb)
+        - **Auc**
+          - [AUC / ROC AUC (Area Under the ROC Curve)](data_science/machine_learning/metrics/tabular/classification/auc/00_overview.ipynb)
+        - **Average Precision Score**
+          - [average_precision_score (Average Precision, AP)](data_science/machine_learning/metrics/tabular/classification/average_precision_score/00_overview.ipynb)
+        - **Balanced Accuracy Score**
+          - [balanced_accuracy_score](data_science/machine_learning/metrics/tabular/classification/balanced_accuracy_score/00_overview.ipynb)
+        - **Brier Score Loss**
+          - [brier_score_loss (Brier score)](data_science/machine_learning/metrics/tabular/classification/brier_score_loss/00_overview.ipynb)
+        - **Class Likelihood Ratios**
+          - [class_likelihood_ratios (LR+ / LR-)](data_science/machine_learning/metrics/tabular/classification/class_likelihood_ratios/00_overview.ipynb)
+        - **Classification Report**
+          - [classification_report](data_science/machine_learning/metrics/tabular/classification/classification_report/00_overview.ipynb)
+        - **Cohen Kappa Score**
+          - [Cohen's Kappa (`cohen_kappa_score`)](data_science/machine_learning/metrics/tabular/classification/cohen_kappa_score/00_overview.ipynb)
+        - **Confusion Matrix**
+          - [confusion_matrix](data_science/machine_learning/metrics/tabular/classification/confusion_matrix/00_overview.ipynb)
+        - **Confusion Matrix At Thresholds**
+          - [confusion_matrix_at_thresholds](data_science/machine_learning/metrics/tabular/classification/confusion_matrix_at_thresholds/00_overview.ipynb)
+        - **Coverage Error**
+          - [coverage_error](data_science/machine_learning/metrics/tabular/classification/coverage_error/00_overview.ipynb)
+        - **D2 Brier Score**
+          - [D² Brier Score (`d2_brier_score`)](data_science/machine_learning/metrics/tabular/classification/d2_brier_score/00_overview.ipynb)
+        - **D2 Log Loss Score**
+          - [D² Log Loss Score (`d2_log_loss_score`)](data_science/machine_learning/metrics/tabular/classification/d2_log_loss_score/00_overview.ipynb)
+        - **Dcg Score**
+          - [dcg_score (Discounted Cumulative Gain)](data_science/machine_learning/metrics/tabular/classification/dcg_score/00_overview.ipynb)
+        - **Det Curve**
+          - [det_curve](data_science/machine_learning/metrics/tabular/classification/det_curve/00_overview.ipynb)
+        - **F1 Score**
+          - [F1 Score (`f1_score`)](data_science/machine_learning/metrics/tabular/classification/f1_score/00_overview.ipynb)
+        - **Fbeta Score**
+          - [`fbeta_score` (Fβ score)](data_science/machine_learning/metrics/tabular/classification/fbeta_score/00_overview.ipynb)
+        - **Hamming Loss**
+          - [hamming_loss (bitwise error rate for multilabel classification)](data_science/machine_learning/metrics/tabular/classification/hamming_loss/00_overview.ipynb)
+        - **Hinge Loss**
+          - [hinge_loss](data_science/machine_learning/metrics/tabular/classification/hinge_loss/00_overview.ipynb)
+        - **Jaccard Score**
+          - [Jaccard Score (Jaccard Similarity / Intersection-over-Union)](data_science/machine_learning/metrics/tabular/classification/jaccard_score/00_overview.ipynb)
+        - **Label Ranking Average Precision Score**
+          - [label_ranking_average_precision_score](data_science/machine_learning/metrics/tabular/classification/label_ranking_average_precision_score/00_overview.ipynb)
+        - **Label Ranking Loss**
+          - [label_ranking_loss](data_science/machine_learning/metrics/tabular/classification/label_ranking_loss/00_overview.ipynb)
+        - **Log Loss**
+          - [log_loss (cross-entropy / negative log-likelihood)](data_science/machine_learning/metrics/tabular/classification/log_loss/00_overview.ipynb)
+        - **Matthews Corrcoef**
+          - [matthews_corrcoef (Matthews Correlation Coefficient, MCC)](data_science/machine_learning/metrics/tabular/classification/matthews_corrcoef/00_overview.ipynb)
+        - **Multilabel Confusion Matrix**
+          - [multilabel_confusion_matrix](data_science/machine_learning/metrics/tabular/classification/multilabel_confusion_matrix/00_overview.ipynb)
+        - **Ndcg Score**
+          - [`ndcg_score` — Normalized Discounted Cumulative Gain (NDCG)](data_science/machine_learning/metrics/tabular/classification/ndcg_score/00_overview.ipynb)
+        - **Precision Recall Curve**
+          - [precision_recall_curve](data_science/machine_learning/metrics/tabular/classification/precision_recall_curve/00_overview.ipynb)
+        - **Precision Recall Fscore Support**
+          - [precision_recall_fscore_support](data_science/machine_learning/metrics/tabular/classification/precision_recall_fscore_support/00_overview.ipynb)
+        - **Precision Score**
+          - [precision_score](data_science/machine_learning/metrics/tabular/classification/precision_score/00_overview.ipynb)
+        - **Recall Score**
+          - [recall_score](data_science/machine_learning/metrics/tabular/classification/recall_score/00_overview.ipynb)
+        - **Roc Auc Score**
+          - [roc_auc_score (ROC AUC)](data_science/machine_learning/metrics/tabular/classification/roc_auc_score/00_overview.ipynb)
+        - **Roc Curve**
+          - [ROC Curve (Receiver Operating Characteristic)](data_science/machine_learning/metrics/tabular/classification/roc_curve/00_overview.ipynb)
+        - **Top K Accuracy Score**
+          - [top_k_accuracy_score](data_science/machine_learning/metrics/tabular/classification/top_k_accuracy_score/00_overview.ipynb)
+        - **Zero One Loss**
+          - [zero_one_loss (classification error / 1 - accuracy)](data_science/machine_learning/metrics/tabular/classification/zero_one_loss/00_overview.ipynb)
+      - **Clustering**
+        - [Clustering Metrics (Tabular)](data_science/machine_learning/metrics/tabular/clustering/00_overview.ipynb)
+        - **Adjusted Mutual Info Score**
+          - [Adjusted Mutual Information (AMI) — `adjusted_mutual_info_score`](data_science/machine_learning/metrics/tabular/clustering/adjusted_mutual_info_score/00_overview.ipynb)
+        - **Adjusted Rand Score**
+          - [adjusted_rand_score (Adjusted Rand Index / ARI)](data_science/machine_learning/metrics/tabular/clustering/adjusted_rand_score/00_overview.ipynb)
+        - **Calinski Harabasz Score**
+          - [calinski_harabasz_score](data_science/machine_learning/metrics/tabular/clustering/calinski_harabasz_score/00_overview.ipynb)
+        - **Completeness Score**
+          - [Completeness score (clustering)](data_science/machine_learning/metrics/tabular/clustering/completeness_score/00_overview.ipynb)
+        - **Contingency Matrix**
+          - [Contingency Matrix (`sklearn.metrics.cluster.contingency_matrix`)](data_science/machine_learning/metrics/tabular/clustering/contingency_matrix/00_overview.ipynb)
+        - **Davies Bouldin Score**
+          - [davies_bouldin_score (Davies–Bouldin Index, DBI)](data_science/machine_learning/metrics/tabular/clustering/davies_bouldin_score/00_overview.ipynb)
+        - **Fowlkes Mallows Score**
+          - [Fowlkes–Mallows Score (`fowlkes_mallows_score`)](data_science/machine_learning/metrics/tabular/clustering/fowlkes_mallows_score/00_overview.ipynb)
+        - **Homogeneity Completeness V Measure**
+          - [homogeneity_completeness_v_measure](data_science/machine_learning/metrics/tabular/clustering/homogeneity_completeness_v_measure/00_overview.ipynb)
+        - **Homogeneity Score**
+          - [Homogeneity Score (`homogeneity_score`)](data_science/machine_learning/metrics/tabular/clustering/homogeneity_score/00_overview.ipynb)
+        - **Mutual Info Score**
+          - [Mutual Information Score (`mutual_info_score`)](data_science/machine_learning/metrics/tabular/clustering/mutual_info_score/00_overview.ipynb)
+        - **Normalized Mutual Info Score**
+          - [normalized_mutual_info_score](data_science/machine_learning/metrics/tabular/clustering/normalized_mutual_info_score/00_overview.ipynb)
+        - **Pair Confusion Matrix**
+          - [pair_confusion_matrix](data_science/machine_learning/metrics/tabular/clustering/pair_confusion_matrix/00_overview.ipynb)
+        - **Rand Score**
+          - [Rand Score (Rand Index)](data_science/machine_learning/metrics/tabular/clustering/rand_score/00_overview.ipynb)
+        - **Silhouette Samples**
+          - [silhouette_samples](data_science/machine_learning/metrics/tabular/clustering/silhouette_samples/00_overview.ipynb)
+        - **Silhouette Score**
+          - [Silhouette Score — Clustering Validation (From Scratch)](data_science/machine_learning/metrics/tabular/clustering/silhouette_score/00_overview.ipynb)
+        - **V Measure Score**
+          - [V-measure score (`v_measure_score`)](data_science/machine_learning/metrics/tabular/clustering/v_measure_score/00_overview.ipynb)
+      - **Regression**
+        - [Regression Metrics (Tabular)](data_science/machine_learning/metrics/tabular/regression/00_overview.ipynb)
+        - **D2 Absolute Error Score**
+          - [D² Absolute Error Score (`d2_absolute_error_score`)](data_science/machine_learning/metrics/tabular/regression/d2_absolute_error_score/00_overview.ipynb)
+        - **D2 Pinball Score**
+          - [D² Pinball Score (`d2_pinball_score`)](data_science/machine_learning/metrics/tabular/regression/d2_pinball_score/00_overview.ipynb)
+        - **D2 Tweedie Score**
+          - [D² Tweedie Score (`d2_tweedie_score`)](data_science/machine_learning/metrics/tabular/regression/d2_tweedie_score/00_overview.ipynb)
+        - **Explained Variance Score**
+          - [Explained Variance Score (`explained_variance_score`)](data_science/machine_learning/metrics/tabular/regression/explained_variance_score/00_overview.ipynb)
+        - **Max Error**
+          - [Max Error (`max_error`)](data_science/machine_learning/metrics/tabular/regression/max_error/00_overview.ipynb)
+        - **Mean Absolute Error**
+          - [mean_absolute_error (MAE)](data_science/machine_learning/metrics/tabular/regression/mean_absolute_error/00_overview.ipynb)
+        - **Mean Absolute Percentage Error**
+          - [mean_absolute_percentage_error (MAPE)](data_science/machine_learning/metrics/tabular/regression/mean_absolute_percentage_error/00_overview.ipynb)
+        - **Mean Gamma Deviance**
+          - [Mean Gamma Deviance (`mean_gamma_deviance`) — Regression Metric (From Scratch)](data_science/machine_learning/metrics/tabular/regression/mean_gamma_deviance/00_overview.ipynb)
+        - **Mean Pinball Loss**
+          - [mean_pinball_loss (Pinball / Quantile Loss)](data_science/machine_learning/metrics/tabular/regression/mean_pinball_loss/00_overview.ipynb)
+        - **Mean Poisson Deviance**
+          - [`mean_poisson_deviance`](data_science/machine_learning/metrics/tabular/regression/mean_poisson_deviance/00_overview.ipynb)
+        - **Mean Squared Error**
+          - [mean_squared_error (MSE)](data_science/machine_learning/metrics/tabular/regression/mean_squared_error/00_overview.ipynb)
+        - **Mean Squared Log Error**
+          - [Mean Squared Logarithmic Error (MSLE)](data_science/machine_learning/metrics/tabular/regression/mean_squared_log_error/00_overview.ipynb)
+        - **Mean Tweedie Deviance**
+          - [mean_tweedie_deviance (Mean Tweedie Deviance)](data_science/machine_learning/metrics/tabular/regression/mean_tweedie_deviance/00_overview.ipynb)
+        - **Median Absolute Error**
+          - [median_absolute_error (MedAE)](data_science/machine_learning/metrics/tabular/regression/median_absolute_error/00_overview.ipynb)
+        - **R2 Score**
+          - [R² Score (`r2_score`)](data_science/machine_learning/metrics/tabular/regression/r2_score/00_overview.ipynb)
+        - **Root Mean Squared Error**
+          - [Root Mean Squared Error (RMSE) — Regression Metric (From Scratch)](data_science/machine_learning/metrics/tabular/regression/root_mean_squared_error/00_overview.ipynb)
+        - **Root Mean Squared Log Error**
+          - [Root Mean Squared Logarithmic Error (RMSLE) — Regression Metric (From Scratch)](data_science/machine_learning/metrics/tabular/regression/root_mean_squared_log_error/00_overview.ipynb)
   - **Supervised Learning**
     - **Tabular Data**
       - **Gaussian Processes**
@@ -101,6 +264,252 @@ A portfolio-style knowledge base for computer science and software engineering t
     - [Twin Delayed DDPG (TD3) — from scratch in PyTorch](data_science/reinforcement_learning/TD3/00_overview.ipynb)
   - **TRPO**
     - [TRPO (Trust Region Policy Optimization) — low-level PyTorch implementation](data_science/reinforcement_learning/TRPO/00_overview.ipynb)
+- **Statistics**
+  - **Bayesian**
+    - **01 Priors And Conjugacy**
+      - [01 Priors And Conjugacy](data_science/statistics/bayesian/01_priors_and_conjugacy/00_overview.ipynb)
+    - **02 Posterior Inference And Credible Intervals**
+      - [02 Posterior Inference And Credible Intervals](data_science/statistics/bayesian/02_posterior_inference_and_credible_intervals/00_overview.ipynb)
+    - **03 Mcmc Metropolis Gibbs Hmc**
+      - [03 Mcmc Metropolis Gibbs Hmc](data_science/statistics/bayesian/03_mcmc_metropolis_gibbs_hmc/00_overview.ipynb)
+    - **04 Variational Inference**
+      - [04 Variational Inference](data_science/statistics/bayesian/04_variational_inference/00_overview.ipynb)
+    - **05 Hierarchical Models Partial Pooling**
+      - [05 Hierarchical Models Partial Pooling](data_science/statistics/bayesian/05_hierarchical_models_partial_pooling/00_overview.ipynb)
+    - **06 Bayesian Regression And Glms**
+      - [06 Bayesian Regression And Glms](data_science/statistics/bayesian/06_bayesian_regression_and_glms/00_overview.ipynb)
+    - **07 Model Comparison Bayes Factors Loo Waic**
+      - [07 Model Comparison Bayes Factors Loo Waic](data_science/statistics/bayesian/07_model_comparison_bayes_factors_loo_waic/00_overview.ipynb)
+  - **Copulas**
+    - **01 Gaussian And T Copulas**
+      - [01 Gaussian And T Copulas](data_science/statistics/copulas/01_gaussian_and_t_copulas/00_overview.ipynb)
+    - **02 Archimedean Copulas**
+      - [02 Archimedean Copulas](data_science/statistics/copulas/02_archimedean_copulas/00_overview.ipynb)
+  - **Distributions**
+    - **01 Common Distributions**
+      - **Continous**
+        - **Alpha**
+          - [Alpha distribution (`alpha`)](data_science/statistics/distributions/01_common_distributions/continous/alpha/overview.ipynb)
+        - **Anglit**
+          - [Anglit distribution](data_science/statistics/distributions/01_common_distributions/continous/anglit/overview.ipynb)
+        - **Arcsine**
+          - [Arcsine Distribution](data_science/statistics/distributions/01_common_distributions/continous/arcsine/overview.ipynb)
+        - **Argus**
+          - [ARGUS distribution (`argus`)](data_science/statistics/distributions/01_common_distributions/continous/argus/overview.ipynb)
+        - **Beta**
+          - [Beta Distribution — Modeling Uncertain Probabilities](data_science/statistics/distributions/01_common_distributions/continous/beta/overview.ipynb)
+        - **Bradford**
+          - [Bradford Distribution (`bradford`)](data_science/statistics/distributions/01_common_distributions/continous/bradford/overview.ipynb)
+        - **Burr**
+          - [Burr Distribution (`burr`, Burr Type III / Dagum)](data_science/statistics/distributions/01_common_distributions/continous/burr/overview.ipynb)
+        - **Cauchy**
+          - [Cauchy distribution](data_science/statistics/distributions/01_common_distributions/continous/cauchy/overview.ipynb)
+        - **Cosine**
+          - [Cosine distribution (continuous)](data_science/statistics/distributions/01_common_distributions/continous/cosine/overview.ipynb)
+        - **Crystalball**
+          - [Crystal Ball distribution (`crystalball`)](data_science/statistics/distributions/01_common_distributions/continous/crystalball/overview.ipynb)
+        - **Dgamma**
+          - [`dgamma` (Double Gamma) Distribution](data_science/statistics/distributions/01_common_distributions/continous/dgamma/overview.ipynb)
+        - **Dirichlet**
+          - [Dirichlet Distribution (`dirichlet`) — Modeling Random Probability Vectors](data_science/statistics/distributions/01_common_distributions/continous/dirichlet/overview.ipynb)
+        - **Dpareto Lognorm**
+          - [Double Pareto Lognormal distribution (`dpareto_lognorm`)](data_science/statistics/distributions/01_common_distributions/continous/dpareto_lognorm/overview.ipynb)
+        - **Dweibull**
+          - [`dweibull` (Double Weibull) Distribution](data_science/statistics/distributions/01_common_distributions/continous/dweibull/overview.ipynb)
+        - **Expon**
+          - [Exponential Distribution (`expon`)](data_science/statistics/distributions/01_common_distributions/continous/expon/overview.ipynb)
+        - **Exponnorm**
+          - [`exponnorm` (Exponentially Modified Normal / exGaussian)](data_science/statistics/distributions/01_common_distributions/continous/exponnorm/overview.ipynb)
+        - **Exponpow**
+          - [Exponential power distribution (`exponpow`)](data_science/statistics/distributions/01_common_distributions/continous/exponpow/overview.ipynb)
+        - **Exponweib**
+          - [Exponentiated Weibull distribution (`exponweib`)](data_science/statistics/distributions/01_common_distributions/continous/exponweib/overview.ipynb)
+        - **F**
+          - [F distribution (`f`)](data_science/statistics/distributions/01_common_distributions/continous/f/overview.ipynb)
+        - **Fatiguelife**
+          - [Fatigue-life distribution (`fatiguelife`) — Birnbaum–Saunders model for fatigue failures](data_science/statistics/distributions/01_common_distributions/continous/fatiguelife/overview.ipynb)
+        - **Fisk**
+          - [Fisk distribution (`fisk`) — the log-logistic workhorse](data_science/statistics/distributions/01_common_distributions/continous/fisk/overview.ipynb)
+        - **Gamma**
+          - [Gamma distribution](data_science/statistics/distributions/01_common_distributions/continous/gamma/overview.ipynb)
+        - **Gausshyper**
+          - [`gausshyper` (Gauss hypergeometric) distribution](data_science/statistics/distributions/01_common_distributions/continous/gausshyper/overview.ipynb)
+        - **Genexpon**
+          - [Generalized exponential distribution (`genexpon`)](data_science/statistics/distributions/01_common_distributions/continous/genexpon/overview.ipynb)
+        - **Genextreme**
+          - [`genextreme` (Generalized Extreme Value / GEV) distribution](data_science/statistics/distributions/01_common_distributions/continous/genextreme/overview.ipynb)
+        - **Gengamma**
+          - [Generalized Gamma distribution (`gengamma`)](data_science/statistics/distributions/01_common_distributions/continous/gengamma/overview.ipynb)
+        - **Genhalflogistic**
+          - [Generalized Half-Logistic (`genhalflogistic`) Distribution — A Bounded, Logistic-Like Family](data_science/statistics/distributions/01_common_distributions/continous/genhalflogistic/overview.ipynb)
+        - **Landau**
+          - [Landau distribution](data_science/statistics/distributions/01_common_distributions/continous/landau/overview.ipynb)
+        - **Laplace**
+          - [Laplace distribution: `laplace` (double exponential)](data_science/statistics/distributions/01_common_distributions/continous/laplace/overview.ipynb)
+        - **Laplace Asymmetric**
+          - [Asymmetric Laplace Distribution (`laplace_asymmetric`)](data_science/statistics/distributions/01_common_distributions/continous/laplace_asymmetric/overview.ipynb)
+        - **Levy**
+          - [Lévy (`levy`) distribution](data_science/statistics/distributions/01_common_distributions/continous/levy/overview.ipynb)
+        - **Levy L**
+          - [Left-skewed Lévy distribution (`levy_l`)](data_science/statistics/distributions/01_common_distributions/continous/levy_l/overview.ipynb)
+        - **Loggamma**
+          - [Log-Gamma distribution](data_science/statistics/distributions/01_common_distributions/continous/loggamma/overview.ipynb)
+        - **Logistic**
+          - [Logistic distribution — the “sigmoid” law on ℝ](data_science/statistics/distributions/01_common_distributions/continous/logistic/overview.ipynb)
+        - **Loglaplace**
+          - [Log-Laplace Distribution — a log-symmetric, heavy-tailed model on $(0,\infty)$](data_science/statistics/distributions/01_common_distributions/continous/loglaplace/overview.ipynb)
+        - **Lognorm**
+          - [Lognormal Distribution (`lognorm`)](data_science/statistics/distributions/01_common_distributions/continous/lognorm/overview.ipynb)
+        - **Loguniform**
+          - [Loguniform Distribution — Uniform in Log Space](data_science/statistics/distributions/01_common_distributions/continous/loguniform/overview.ipynb)
+        - **Matrix Normal**
+          - [Matrix Normal distribution (`matrix_normal`) — Gaussian random matrices with separable covariance](data_science/statistics/distributions/01_common_distributions/continous/matrix_normal/overview.ipynb)
+        - **Maxwell**
+          - [Maxwell distribution (`maxwell`)](data_science/statistics/distributions/01_common_distributions/continous/maxwell/overview.ipynb)
+        - **Mielke**
+          - [Mielke Distribution (`mielke`, Mielke Beta-Kappa / Dagum)](data_science/statistics/distributions/01_common_distributions/continous/mielke/overview.ipynb)
+        - **Moyal**
+          - [Moyal distribution — a Landau-like energy-loss model](data_science/statistics/distributions/01_common_distributions/continous/moyal/overview.ipynb)
+        - **Multivariate Normal**
+          - [Multivariate Normal distribution (`multivariate_normal`)](data_science/statistics/distributions/01_common_distributions/continous/multivariate_normal/overview.ipynb)
+        - **Nakagami**
+          - [Nakagami distribution](data_science/statistics/distributions/01_common_distributions/continous/nakagami/overview.ipynb)
+        - **Ncf**
+          - [Noncentral F distribution (`ncf`)](data_science/statistics/distributions/01_common_distributions/continous/ncf/overview.ipynb)
+        - **Nct**
+          - [`nct` (Noncentral t) distribution](data_science/statistics/distributions/01_common_distributions/continous/nct/overview.ipynb)
+        - **Ncx2**
+          - [Noncentral Chi-Square distribution (`ncx2`) — squared norms & test power](data_science/statistics/distributions/01_common_distributions/continous/ncx2/overview.ipynb)
+        - **Norm**
+          - [Normal Distribution (`norm`)](data_science/statistics/distributions/01_common_distributions/continous/norm/overview.ipynb)
+        - **Norminvgauss**
+          - [Normal Inverse Gaussian Distribution (`norminvgauss`)](data_science/statistics/distributions/01_common_distributions/continous/norminvgauss/overview.ipynb)
+        - **Pareto**
+          - [Pareto distribution (`pareto`) — heavy-tailed power laws](data_science/statistics/distributions/01_common_distributions/continous/pareto/overview.ipynb)
+        - **Pearson3**
+          - [Pearson type III distribution](data_science/statistics/distributions/01_common_distributions/continous/pearson3/overview.ipynb)
+        - **Powerlaw**
+          - [Power Function Distribution (`powerlaw`)](data_science/statistics/distributions/01_common_distributions/continous/powerlaw/overview.ipynb)
+        - **Powerlognorm**
+          - [Power log-normal distribution (`powerlognorm`)](data_science/statistics/distributions/01_common_distributions/continous/powerlognorm/overview.ipynb)
+        - **Powernorm**
+          - [Power Normal Distribution (`powernorm`) — a proportional-hazards / “minimum of Normals” family](data_science/statistics/distributions/01_common_distributions/continous/powernorm/overview.ipynb)
+        - **Rayleigh**
+          - [Rayleigh distribution (`rayleigh`)](data_science/statistics/distributions/01_common_distributions/continous/rayleigh/overview.ipynb)
+        - **Rdist**
+          - [R Distribution (`rdist`) — Symmetric Beta on $[-1, 1]$](data_science/statistics/distributions/01_common_distributions/continous/rdist/overview.ipynb)
+        - **Recipinvgauss**
+          - [Reciprocal Inverse Gaussian Distribution (`recipinvgauss`)](data_science/statistics/distributions/01_common_distributions/continous/recipinvgauss/overview.ipynb)
+        - **Rel Breitwigner**
+          - [Relativistic Breit–Wigner (`rel_breitwigner`) distribution](data_science/statistics/distributions/01_common_distributions/continous/rel_breitwigner/overview.ipynb)
+        - **Rice**
+          - [`rice` (Rice / Rician distribution)](data_science/statistics/distributions/01_common_distributions/continous/rice/overview.ipynb)
+        - **Semicircular**
+          - [Semicircular Distribution (Wigner semicircle)](data_science/statistics/distributions/01_common_distributions/continous/semicircular/overview.ipynb)
+        - **Skewcauchy**
+          - [Skewed Cauchy distribution (`skewcauchy`)](data_science/statistics/distributions/01_common_distributions/continous/skewcauchy/overview.ipynb)
+        - **Skewnorm**
+          - [Skew-normal distribution](data_science/statistics/distributions/01_common_distributions/continous/skewnorm/overview.ipynb)
+        - **Studentized Range**
+          - [Studentized Range Distribution (`studentized_range`)](data_science/statistics/distributions/01_common_distributions/continous/studentized_range/overview.ipynb)
+        - **T**
+          - [Student's t distribution (`t`)](data_science/statistics/distributions/01_common_distributions/continous/t/overview.ipynb)
+        - **Trapezoid**
+          - [Trapezoid Distribution (`trapezoid`)](data_science/statistics/distributions/01_common_distributions/continous/trapezoid/overview.ipynb)
+        - **Triang**
+          - [Triangular Distribution (`triang`)](data_science/statistics/distributions/01_common_distributions/continous/triang/overview.ipynb)
+        - **Truncexpon**
+          - [Truncated Exponential Distribution (`truncexpon`)](data_science/statistics/distributions/01_common_distributions/continous/truncexpon/overview.ipynb)
+        - **Truncnorm**
+          - [Truncated Normal distribution (`truncnorm`)](data_science/statistics/distributions/01_common_distributions/continous/truncnorm/overview.ipynb)
+        - **Truncpareto**
+          - [Truncated Pareto Distribution (`truncpareto`) — Bounded Power Laws](data_science/statistics/distributions/01_common_distributions/continous/truncpareto/overview.ipynb)
+        - **Truncweibull Min**
+          - [Doubly Truncated Weibull Minimum Distribution (`truncweibull_min`)](data_science/statistics/distributions/01_common_distributions/continous/truncweibull_min/overview.ipynb)
+        - **Uniform**
+          - [Uniform Distribution — Bounded Randomness](data_science/statistics/distributions/01_common_distributions/continous/uniform/overview.ipynb)
+        - **Wald**
+          - [Wald (Inverse Gaussian) distribution (`wald`)](data_science/statistics/distributions/01_common_distributions/continous/wald/overview.ipynb)
+        - **Weibull Max**
+          - [Weibull maximum distribution (`weibull_max`)](data_science/statistics/distributions/01_common_distributions/continous/weibull_max/overview.ipynb)
+        - **Weibull Min**
+          - [Weibull minimum distribution (`weibull_min`)](data_science/statistics/distributions/01_common_distributions/continous/weibull_min/overview.ipynb)
+        - **Wishart**
+          - [Wishart distribution (`wishart`) — Random scatter / covariance matrices](data_science/statistics/distributions/01_common_distributions/continous/wishart/overview.ipynb)
+        - **Wrapcauchy**
+          - [Wrapped Cauchy distribution (`wrapcauchy`)](data_science/statistics/distributions/01_common_distributions/continous/wrapcauchy/overview.ipynb)
+      - **Discret**
+        - **Bernoulli**
+          - [Bernoulli distribution (`bernoulli`)](data_science/statistics/distributions/01_common_distributions/discret/bernoulli/overview.ipynb)
+        - **Betabinom**
+          - [Beta-Binomial (`betabinom`) Distribution](data_science/statistics/distributions/01_common_distributions/discret/betabinom/overview.ipynb)
+        - **Betanbinom**
+          - [`betanbinom` (Beta-Negative Binomial)](data_science/statistics/distributions/01_common_distributions/discret/betanbinom/overview.ipynb)
+        - **Binom**
+          - [`binom` (Binomial distribution)](data_science/statistics/distributions/01_common_distributions/discret/binom/overview.ipynb)
+        - **Boltzmann**
+          - [Boltzmann distribution (`scipy.stats.boltzmann`)](data_science/statistics/distributions/01_common_distributions/discret/boltzmann/overview.ipynb)
+        - **Dirichlet Multinomial**
+          - [Dirichlet–Multinomial Distribution (`dirichlet_multinomial`)](data_science/statistics/distributions/01_common_distributions/discret/dirichlet_multinomial/overview.ipynb)
+        - **Dlaplace**
+          - [Discrete Laplace: `dlaplace` (two-sided geometric)](data_science/statistics/distributions/01_common_distributions/discret/dlaplace/overview.ipynb)
+        - **Multinomial**
+          - [`multinomial` (Multinomial distribution)](data_science/statistics/distributions/01_common_distributions/discret/multinomial/overview.ipynb)
+        - **Nbinom**
+          - [`nbinom` (Negative binomial distribution)](data_science/statistics/distributions/01_common_distributions/discret/nbinom/overview.ipynb)
+        - **Nchypergeom Fisher**
+          - [`nchypergeom_fisher` (Fisher’s noncentral hypergeometric distribution)](data_science/statistics/distributions/01_common_distributions/discret/nchypergeom_fisher/overview.ipynb)
+        - **Nchypergeom Wallenius**
+          - [`nchypergeom_wallenius` (Wallenius' noncentral hypergeometric distribution)](data_science/statistics/distributions/01_common_distributions/discret/nchypergeom_wallenius/overview.ipynb)
+        - **Nhypergeom**
+          - [Negative hypergeometric distribution (`nhypergeom`)](data_science/statistics/distributions/01_common_distributions/discret/nhypergeom/overview.ipynb)
+        - **Planck**
+          - [Planck distribution (`planck`)](data_science/statistics/distributions/01_common_distributions/discret/planck/overview.ipynb)
+        - **Poisson**
+          - [`poisson` (Poisson distribution)](data_science/statistics/distributions/01_common_distributions/discret/poisson/overview.ipynb)
+        - **Poisson Binom**
+          - [Poisson binomial distribution (`poisson_binom`)](data_science/statistics/distributions/01_common_distributions/discret/poisson_binom/overview.ipynb)
+        - **Randint**
+          - [Random integer (discrete uniform) distribution (`randint`)](data_science/statistics/distributions/01_common_distributions/discret/randint/overview.ipynb)
+        - **Skellam**
+          - [`skellam` (Skellam distribution)](data_science/statistics/distributions/01_common_distributions/discret/skellam/overview.ipynb)
+        - **Yulesimon**
+          - [Yule–Simon distribution (`yulesimon`)](data_science/statistics/distributions/01_common_distributions/discret/yulesimon/overview.ipynb)
+        - **Zipfian**
+          - [Zipfian distribution (`zipfian`)](data_science/statistics/distributions/01_common_distributions/discret/zipfian/overview.ipynb)
+    - **02 Distribution Fitting Mle Qq**
+      - [02 Distribution Fitting Mle Qq](data_science/statistics/distributions/02_distribution_fitting_mle_qq/00_overview.ipynb)
+  - **Hypothesis Testing**
+    - **01 Core Concepts P Values Power**
+      - [01 Core Concepts P Values Power](data_science/statistics/hypothesis_testing/01_core_concepts_p_values_power/00_overview.ipynb)
+    - **02 Parametric Tests T Z Chi2**
+      - [02 Parametric Tests T Z Chi2](data_science/statistics/hypothesis_testing/02_parametric_tests_t_z_chi2/00_overview.ipynb)
+    - **03 Nonparametric Tests Rank Based**
+      - [03 Nonparametric Tests Rank Based](data_science/statistics/hypothesis_testing/03_nonparametric_tests_rank_based/00_overview.ipynb)
+    - **04 Anova And F Tests**
+      - [04 Anova And F Tests](data_science/statistics/hypothesis_testing/04_anova_and_f_tests/00_overview.ipynb)
+    - **05 Kolmogorov Smirnov Tests**
+      - [05 Kolmogorov Smirnov Tests](data_science/statistics/hypothesis_testing/05_kolmogorov_smirnov_tests/00_overview.ipynb)
+    - **06 Multiple Testing Bh Bonferroni**
+      - [06 Multiple Testing Bh Bonferroni](data_science/statistics/hypothesis_testing/06_multiple_testing_bh_bonferroni/00_overview.ipynb)
+  - **Inference**
+    - **01 Point Estimation Mle Map Mom**
+      - [01 Point Estimation Mle Map Mom](data_science/statistics/inference/01_point_estimation_mle_map_mom/00_overview.ipynb)
+    - **02 Confidence Intervals**
+      - [02 Confidence Intervals](data_science/statistics/inference/02_confidence_intervals/00_overview.ipynb)
+    - **03 Bootstrap And Permutation**
+      - [03 Bootstrap And Permutation](data_science/statistics/inference/03_bootstrap_and_permutation/00_overview.ipynb)
+  - **Timeseries**
+    - **State Space Models**
+      - **01 Kalman Filter**
+        - [01 Kalman Filter](data_science/statistics/timeseries/state_space_models/01_kalman_filter/00_overview.ipynb)
+      - **02 Kalman Smoother**
+        - [02 Kalman Smoother](data_science/statistics/timeseries/state_space_models/02_kalman_smoother/00_overview.ipynb)
+    - **Stationarity Tests**
+      - **01 Augmented Dickey Fuller Test**
+        - [01 Augmented Dickey Fuller Test](data_science/statistics/timeseries/stationarity_tests/01_augmented_dickey_fuller_test/00_overview.ipynb)
+      - **02 Kpss Test**
+        - [02 Kpss Test](data_science/statistics/timeseries/stationarity_tests/02_kpss_test/00_overview.ipynb)
 
 ### Backend
 
