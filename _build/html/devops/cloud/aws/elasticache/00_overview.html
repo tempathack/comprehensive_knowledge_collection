@@ -1,0 +1,1023 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Amazon ElastiCache &#8212; Knowledge Archive</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/plotly.min.js"></script>
+    <script src="../../../../_static/plotly.min.js"></script>
+    <script src="../../../../_static/plotly.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'devops/cloud/aws/elasticache/00_overview';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Amazon EMR (Elastic MapReduce)" href="../emr/00_overview.html" />
+    <link rel="prev" title="Amazon EKS (Elastic Kubernetes Service)" href="../eks/00_overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Knowledge Archive</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../book_index.html">
+                    Knowledge Archive
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Backend</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../backend/00_overview.html">Backend — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/api_design/00_overview.html">API Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/communication_patterns/00_overview.html">Communication Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/auth_security/00_overview.html">Auth &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/caching_queues/00_overview.html">Caching &amp; Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/data_storage_modeling/00_overview.html">Data Storage &amp; Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/observability/00_overview.html">Observability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/resilience_performance/00_overview.html">Resilience &amp; Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../backend/testing_quality/00_overview.html">Testing &amp; Quality</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cybersecurity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../cybersecurity/00_overview.html">Cybersecurity — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/identity_access/00_overview.html">Identity &amp; Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/incident_response/00_overview.html">Incident Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/network_cloud_security/00_overview.html">Network &amp; Cloud Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/secure_coding_owasp/00_overview.html">Secure Coding &amp; OWASP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/threat_modeling/00_overview.html">Threat Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/vulnerability_management/00_overview.html">Vulnerability Management</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../data_science/00_overview.html">Data Science — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../data_science/deeplearning/00_overview.html">Deep Learning — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/deeplearning/tabular_data/artificial_neural_networks/00_overview.html">Artificial Neural Networks (MLPs) for Tabular Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/deeplearning/timeseries/lstm_and_gru/00_overview.html">LSTM and GRU for Time Series Forecasting (from scratch + PyTorch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/deeplearning/visual/cnn/00_overview.html">Convolutional Neural Networks (CNNs) for Image Data (from scratch NumPy + PyTorch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/deeplearning/visual/resnet/00_overview.html">Residual Networks (ResNets) for Image Data (from scratch NumPy + PyTorch)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_science/linear_algebra/00_overview.html">Linear Algebra — Overview</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../data_science/machine_learning/00_overview.html">Machine Learning — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/dbscan/00_overview.html">DBSCAN — Density-Based Clustering (Finding crowds instead of shapes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/ica/00_overview.html">Independent Component Analysis (ICA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/isomap/00_overview.html">Isomap — Nonlinear Dimensionality Reduction (Geodesic Distances)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/lle/00_overview.html">Locally Linear Embedding (LLE) — Manifold Learning (From Scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/mds/00_overview.html">Multidimensional Scaling (MDS) — “Recreating a map using only pairwise distances”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/pca/00_overview.html">Principal Component Analysis (PCA) + Kernel PCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/tsne/00_overview.html">t-SNE: Visualizing High-Dimensional Data (Preserve Friendships, Not Geography)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/dimensionality_reduction/tabular_data/umap/00_overview.html">UMAP (Uniform Manifold Approximation and Projection)</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/00_overview.html">Classification Metrics (Tabular)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/accuracy_score/00_overview.html"><code class="docutils literal notranslate"><span class="pre">accuracy_score</span></code> (classification accuracy)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/auc/00_overview.html">AUC / ROC AUC (Area Under the ROC Curve)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/average_precision_score/00_overview.html">average_precision_score (Average Precision, AP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/balanced_accuracy_score/00_overview.html">balanced_accuracy_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/brier_score_loss/00_overview.html">brier_score_loss (Brier score)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/class_likelihood_ratios/00_overview.html">class_likelihood_ratios (LR+ / LR-)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/classification_report/00_overview.html">classification_report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/cohen_kappa_score/00_overview.html">Cohen’s Kappa (<code class="docutils literal notranslate"><span class="pre">cohen_kappa_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/confusion_matrix/00_overview.html">confusion_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/confusion_matrix_at_thresholds/00_overview.html">confusion_matrix_at_thresholds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/coverage_error/00_overview.html">coverage_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/d2_brier_score/00_overview.html">D² Brier Score (<code class="docutils literal notranslate"><span class="pre">d2_brier_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/d2_log_loss_score/00_overview.html">D² Log Loss Score (<code class="docutils literal notranslate"><span class="pre">d2_log_loss_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/dcg_score/00_overview.html">dcg_score (Discounted Cumulative Gain)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/det_curve/00_overview.html">det_curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/f1_score/00_overview.html">F1 Score (<code class="docutils literal notranslate"><span class="pre">f1_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/fbeta_score/00_overview.html"><code class="docutils literal notranslate"><span class="pre">fbeta_score</span></code> (Fβ score)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/hamming_loss/00_overview.html">hamming_loss (bitwise error rate for multilabel classification)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/hinge_loss/00_overview.html">hinge_loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/jaccard_score/00_overview.html">Jaccard Score (Jaccard Similarity / Intersection-over-Union)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/label_ranking_average_precision_score/00_overview.html">label_ranking_average_precision_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/label_ranking_loss/00_overview.html">label_ranking_loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/log_loss/00_overview.html">log_loss (cross-entropy / negative log-likelihood)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/matthews_corrcoef/00_overview.html">matthews_corrcoef (Matthews Correlation Coefficient, MCC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/multilabel_confusion_matrix/00_overview.html">multilabel_confusion_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/ndcg_score/00_overview.html"><code class="docutils literal notranslate"><span class="pre">ndcg_score</span></code> — Normalized Discounted Cumulative Gain (NDCG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/precision_recall_curve/00_overview.html">precision_recall_curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/precision_recall_fscore_support/00_overview.html">precision_recall_fscore_support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/precision_score/00_overview.html">precision_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/recall_score/00_overview.html">recall_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/roc_auc_score/00_overview.html">roc_auc_score (ROC AUC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/roc_curve/00_overview.html">ROC Curve (Receiver Operating Characteristic)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/top_k_accuracy_score/00_overview.html">top_k_accuracy_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/classification/zero_one_loss/00_overview.html">zero_one_loss (classification error / 1 - accuracy)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/00_overview.html">Clustering Metrics (Tabular)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/adjusted_mutual_info_score/00_overview.html">Adjusted Mutual Information (AMI) — <code class="docutils literal notranslate"><span class="pre">adjusted_mutual_info_score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/adjusted_rand_score/00_overview.html">adjusted_rand_score (Adjusted Rand Index / ARI)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/calinski_harabasz_score/00_overview.html">calinski_harabasz_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/completeness_score/00_overview.html">Completeness score (clustering)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/contingency_matrix/00_overview.html">Contingency Matrix (<code class="docutils literal notranslate"><span class="pre">sklearn.metrics.cluster.contingency_matrix</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/davies_bouldin_score/00_overview.html">davies_bouldin_score (Davies–Bouldin Index, DBI)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/fowlkes_mallows_score/00_overview.html">Fowlkes–Mallows Score (<code class="docutils literal notranslate"><span class="pre">fowlkes_mallows_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/homogeneity_completeness_v_measure/00_overview.html">homogeneity_completeness_v_measure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/homogeneity_score/00_overview.html">Homogeneity Score (<code class="docutils literal notranslate"><span class="pre">homogeneity_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/mutual_info_score/00_overview.html">Mutual Information Score (<code class="docutils literal notranslate"><span class="pre">mutual_info_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/normalized_mutual_info_score/00_overview.html">normalized_mutual_info_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/pair_confusion_matrix/00_overview.html">pair_confusion_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/rand_score/00_overview.html">Rand Score (Rand Index)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/silhouette_samples/00_overview.html">silhouette_samples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/silhouette_score/00_overview.html">Silhouette Score — Clustering Validation (From Scratch)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/clustering/v_measure_score/00_overview.html">V-measure score (<code class="docutils literal notranslate"><span class="pre">v_measure_score</span></code>)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/00_overview.html">Regression Metrics (Tabular)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/d2_absolute_error_score/00_overview.html">D² Absolute Error Score (<code class="docutils literal notranslate"><span class="pre">d2_absolute_error_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/d2_pinball_score/00_overview.html">D² Pinball Score (<code class="docutils literal notranslate"><span class="pre">d2_pinball_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/d2_tweedie_score/00_overview.html">D² Tweedie Score (<code class="docutils literal notranslate"><span class="pre">d2_tweedie_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/explained_variance_score/00_overview.html">Explained Variance Score (<code class="docutils literal notranslate"><span class="pre">explained_variance_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/max_error/00_overview.html">Max Error (<code class="docutils literal notranslate"><span class="pre">max_error</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_absolute_error/00_overview.html">mean_absolute_error (MAE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_absolute_percentage_error/00_overview.html">mean_absolute_percentage_error (MAPE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_gamma_deviance/00_overview.html">Mean Gamma Deviance (<code class="docutils literal notranslate"><span class="pre">mean_gamma_deviance</span></code>) — Regression Metric (From Scratch)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_pinball_loss/00_overview.html">mean_pinball_loss (Pinball / Quantile Loss)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_poisson_deviance/00_overview.html"><code class="docutils literal notranslate"><span class="pre">mean_poisson_deviance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_squared_error/00_overview.html">mean_squared_error (MSE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_squared_log_error/00_overview.html">Mean Squared Logarithmic Error (MSLE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/mean_tweedie_deviance/00_overview.html">mean_tweedie_deviance (Mean Tweedie Deviance)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/median_absolute_error/00_overview.html">median_absolute_error (MedAE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/r2_score/00_overview.html">R² Score (<code class="docutils literal notranslate"><span class="pre">r2_score</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/root_mean_squared_error/00_overview.html">Root Mean Squared Error (RMSE) — Regression Metric (From Scratch)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/machine_learning/metrics/tabular/regression/root_mean_squared_log_error/00_overview.html">Root Mean Squared Logarithmic Error (RMSLE) — Regression Metric (From Scratch)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/gaussian_processes/00_overview.html">Gaussian Processes (GP) — Regression &amp; Probabilistic Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/generalized_linear_models/00_overview.html">Generalized Linear Models (GLMs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/k_nearest_neighbors/00_overview.html">K-Nearest Neighbors (KNN) — Classification &amp; Regression (From Scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/linear_and_quadratic_discriminant_analysis/00_overview.html">Linear and Quadratic Discriminant Analysis (LDA / QDA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/linear_regression_and_co/00_overview.html">Linear Regression &amp; Friends (OLS, Ridge, Lasso, Elastic Net)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/naive_bayes/00_overview.html">Naive Bayes (Gaussian, Multinomial, Complement, Bernoulli, Categorical) + Out-of-core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/support_vector_machines/00_overview.html">Support Vector Machines (SVC + SVR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/tabular_data/tree_based_algorithms/00_overview.html">Tree-Based Algorithms (Decision Trees, Random Forests, Gradient Boosting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_arch_models/overview.html">ARCH Models (Volatility Models)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_autoregressive_ar/overview.html">Autoregressive (AR) models (from scratch NumPy + Plotly)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_kalman_filter/overview.html">Kalman Filter — linear Gaussian state-space model (NumPy + Plotly)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_moving_average_ma/overview.html">01 Moving Average (MA) Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_prophet/overview.html">Prophet forecaster (wrapper + from-scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_sarima/overview.html">SARIMA (Seasonal ARIMA): seasonality handling, differencing, and forecasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_varma/overview.html">VARMA (Vector Autoregressive Moving Average)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/01_vector_autoregression_var/overview.html">Vector Autoregression (VAR) from scratch (NumPy)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/02_arima_autoregressive_integrated_moving_average/overview.html">ARIMA (Autoregressive Integrated Moving Average)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/02_bats/overview.html">BATS forecaster (multiple seasonality)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/02_garch_models/overview.html">GARCH(1,1) Models (Volatility Models)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/02_sarimax/overview.html">SARIMAX (Seasonal ARIMA with Exogenous Variables)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/02_varmax/overview.html">VARMAX (VARMA with eXogenous inputs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/classic_statistical/03_tbats/overview.html">TBATS forecaster (multiple seasonality)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/distancebased/overview.html">Distance-based time-series regression (KNN)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/distancebased/k_neighbors_time_series_regressor/overview.html">K-Nearest Neighbors Time Series Regressor (KNN-TS) — analog forecasting from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/ensemble/overview.html">Ensembles (Time-Series Forest)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/ensemble/composable_time_series_forest_regressor/overview.html">ComposableTimeSeriesForestRegressor (sktime-style TSF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/ensemble/time_series_forest_regressor/overview.html">TimeSeriesForestRegressor (TSF): interval features + tree ensemble</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/kernelbased/overview.html">Kernel-based regression (SVR, ROCKET)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/kernelbased/rocket_regressor/overview.html">RocketRegressor (sktime-style) — ROCKET features + RidgeCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/machine_learning/supervised_learning/timeseries/regression/kernelbased/time_series_svr_tslearn/overview.html">TimeSeriesSVRTslearn (tslearn-style) — Support Vector Regression for time series</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../data_science/reinforcement_learning/00_overview.html">Reinforcement Learning — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/A2C/00_overview.html">A2C (Advantage Actor-Critic) — Low-Level PyTorch Implementation (CartPole-v1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/ACKTR/00_overview.html">ACKTR (Actor–Critic using Kronecker-Factored Trust Region)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/DDPG/00_overview.html">DDPG (Deep Deterministic Policy Gradient) — Continuous Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/DQN/00_overview.html">Deep Q-Networks (DQN) for Discrete Action Spaces — Low-Level PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/GAIL/00_overview.html">Generative Adversarial Imitation Learning (GAIL) — low-level PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/HER/00_overview.html">Hindsight Experience Replay (HER) — low-level PyTorch (DDPG) in a goal-based environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/PPO1/00_overview.html">PPO1 (PPO-Clip) — low-level PyTorch implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/PPO2/00_overview.html">Proximal Policy Optimization 2 (PPO2) — from scratch in PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/SAC/00_overview.html">Soft Actor-Critic (SAC) for Continuous Action Spaces (low-level PyTorch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/TD3/00_overview.html">Twin Delayed DDPG (TD3) — from scratch in PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/TRPO/00_overview.html">TRPO (Trust Region Policy Optimization) — low-level PyTorch implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/ACKTR/01_acktr_from_scratch.html">ACKTR from scratch (low-level PyTorch) — CartPole-v1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/reinforcement_learning/DDPG/01_ddpg_from_scratch.html">DDPG (Deep Deterministic Policy Gradient) — from scratch in PyTorch</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../data_science/statistics/00_overview.html">Statistics — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/alpha/overview.html">Alpha distribution (<code class="docutils literal notranslate"><span class="pre">alpha</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/anglit/overview.html">Anglit distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/arcsine/overview.html">Arcsine Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/argus/overview.html">ARGUS distribution (<code class="docutils literal notranslate"><span class="pre">argus</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/beta/overview.html">Beta Distribution — Modeling Uncertain Probabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/bradford/overview.html">Bradford Distribution (<code class="docutils literal notranslate"><span class="pre">bradford</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/burr/overview.html">Burr Distribution (<code class="docutils literal notranslate"><span class="pre">burr</span></code>, Burr Type III / Dagum)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/cauchy/overview.html">Cauchy distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/cosine/overview.html">Cosine distribution (continuous)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/crystalball/overview.html">Crystal Ball distribution (<code class="docutils literal notranslate"><span class="pre">crystalball</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/dgamma/overview.html"><code class="docutils literal notranslate"><span class="pre">dgamma</span></code> (Double Gamma) Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/dirichlet/overview.html">Dirichlet Distribution (<code class="docutils literal notranslate"><span class="pre">dirichlet</span></code>) — Modeling Random Probability Vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/dpareto_lognorm/overview.html">Double Pareto Lognormal distribution (<code class="docutils literal notranslate"><span class="pre">dpareto_lognorm</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/dweibull/overview.html"><code class="docutils literal notranslate"><span class="pre">dweibull</span></code> (Double Weibull) Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/expon/overview.html">Exponential Distribution (<code class="docutils literal notranslate"><span class="pre">expon</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/exponnorm/overview.html"><code class="docutils literal notranslate"><span class="pre">exponnorm</span></code> (Exponentially Modified Normal / exGaussian)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/exponpow/overview.html">Exponential power distribution (<code class="docutils literal notranslate"><span class="pre">exponpow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/exponweib/overview.html">Exponentiated Weibull distribution (<code class="docutils literal notranslate"><span class="pre">exponweib</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/f/overview.html">F distribution (<code class="docutils literal notranslate"><span class="pre">f</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/fatiguelife/overview.html">Fatigue-life distribution (<code class="docutils literal notranslate"><span class="pre">fatiguelife</span></code>) — Birnbaum–Saunders model for fatigue failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/fisk/overview.html">Fisk distribution (<code class="docutils literal notranslate"><span class="pre">fisk</span></code>) — the log-logistic workhorse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/gamma/overview.html">Gamma distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/gausshyper/overview.html"><code class="docutils literal notranslate"><span class="pre">gausshyper</span></code> (Gauss hypergeometric) distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/genexpon/overview.html">Generalized exponential distribution (<code class="docutils literal notranslate"><span class="pre">genexpon</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/genextreme/overview.html"><code class="docutils literal notranslate"><span class="pre">genextreme</span></code> (Generalized Extreme Value / GEV) distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/gengamma/overview.html">Generalized Gamma distribution (<code class="docutils literal notranslate"><span class="pre">gengamma</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/genhalflogistic/overview.html">Generalized Half-Logistic (<code class="docutils literal notranslate"><span class="pre">genhalflogistic</span></code>) Distribution — A Bounded, Logistic-Like Family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/landau/overview.html">Landau distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/laplace/overview.html">Laplace distribution: <code class="docutils literal notranslate"><span class="pre">laplace</span></code> (double exponential)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/laplace_asymmetric/overview.html">Asymmetric Laplace Distribution (<code class="docutils literal notranslate"><span class="pre">laplace_asymmetric</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/levy/overview.html">Lévy (<code class="docutils literal notranslate"><span class="pre">levy</span></code>) distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/levy_l/overview.html">Left-skewed Lévy distribution (<code class="docutils literal notranslate"><span class="pre">levy_l</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/loggamma/overview.html">Log-Gamma distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/logistic/overview.html">Logistic distribution — the “sigmoid” law on ℝ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/loglaplace/overview.html">Log-Laplace Distribution — a log-symmetric, heavy-tailed model on <span class="math notranslate nohighlight">\((0,\infty)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/lognorm/overview.html">Lognormal Distribution (<code class="docutils literal notranslate"><span class="pre">lognorm</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/loguniform/overview.html">Loguniform Distribution — Uniform in Log Space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/matrix_normal/overview.html">Matrix Normal distribution (<code class="docutils literal notranslate"><span class="pre">matrix_normal</span></code>) — Gaussian random matrices with separable covariance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/maxwell/overview.html">Maxwell distribution (<code class="docutils literal notranslate"><span class="pre">maxwell</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/mielke/overview.html">Mielke Distribution (<code class="docutils literal notranslate"><span class="pre">mielke</span></code>, Mielke Beta-Kappa / Dagum)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/moyal/overview.html">Moyal distribution — a Landau-like energy-loss model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/multivariate_normal/overview.html">Multivariate Normal distribution (<code class="docutils literal notranslate"><span class="pre">multivariate_normal</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/nakagami/overview.html">Nakagami distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/ncf/overview.html">Noncentral F distribution (<code class="docutils literal notranslate"><span class="pre">ncf</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/nct/overview.html"><code class="docutils literal notranslate"><span class="pre">nct</span></code> (Noncentral t) distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/ncx2/overview.html">Noncentral Chi-Square distribution (<code class="docutils literal notranslate"><span class="pre">ncx2</span></code>) — squared norms &amp; test power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/norm/overview.html">Normal Distribution (<code class="docutils literal notranslate"><span class="pre">norm</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/norminvgauss/overview.html">Normal Inverse Gaussian Distribution (<code class="docutils literal notranslate"><span class="pre">norminvgauss</span></code>)</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/pareto/overview.html">Pareto distribution (<code class="docutils literal notranslate"><span class="pre">pareto</span></code>) — heavy-tailed power laws</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/pearson3/overview.html">Pearson type III distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/powerlaw/overview.html">Power Function Distribution (<code class="docutils literal notranslate"><span class="pre">powerlaw</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/powerlognorm/overview.html">Power log-normal distribution (<code class="docutils literal notranslate"><span class="pre">powerlognorm</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/powernorm/overview.html">Power Normal Distribution (<code class="docutils literal notranslate"><span class="pre">powernorm</span></code>) — a proportional-hazards / “minimum of Normals” family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/rayleigh/overview.html">Rayleigh distribution (<code class="docutils literal notranslate"><span class="pre">rayleigh</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/rdist/overview.html">R Distribution (<code class="docutils literal notranslate"><span class="pre">rdist</span></code>) — Symmetric Beta on <span class="math notranslate nohighlight">\([-1, 1]\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/recipinvgauss/overview.html">Reciprocal Inverse Gaussian Distribution (<code class="docutils literal notranslate"><span class="pre">recipinvgauss</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/rel_breitwigner/overview.html">Relativistic Breit–Wigner (<code class="docutils literal notranslate"><span class="pre">rel_breitwigner</span></code>) distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/rice/overview.html"><code class="docutils literal notranslate"><span class="pre">rice</span></code> (Rice / Rician distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/semicircular/overview.html">Semicircular Distribution (Wigner semicircle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/skewcauchy/overview.html">Skewed Cauchy distribution (<code class="docutils literal notranslate"><span class="pre">skewcauchy</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/skewnorm/overview.html">Skew-normal distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/studentized_range/overview.html">Studentized Range Distribution (<code class="docutils literal notranslate"><span class="pre">studentized_range</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/t/overview.html">Student’s t distribution (<code class="docutils literal notranslate"><span class="pre">t</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/trapezoid/overview.html">Trapezoid Distribution (<code class="docutils literal notranslate"><span class="pre">trapezoid</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/triang/overview.html">Triangular Distribution (<code class="docutils literal notranslate"><span class="pre">triang</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/truncexpon/overview.html">Truncated Exponential Distribution (<code class="docutils literal notranslate"><span class="pre">truncexpon</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/truncnorm/overview.html">Truncated Normal distribution (<code class="docutils literal notranslate"><span class="pre">truncnorm</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/truncpareto/overview.html">Truncated Pareto Distribution (<code class="docutils literal notranslate"><span class="pre">truncpareto</span></code>) — Bounded Power Laws</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/truncweibull_min/overview.html">Doubly Truncated Weibull Minimum Distribution (<code class="docutils literal notranslate"><span class="pre">truncweibull_min</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/uniform/overview.html">Uniform Distribution — Bounded Randomness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/wald/overview.html">Wald (Inverse Gaussian) distribution (<code class="docutils literal notranslate"><span class="pre">wald</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/weibull_max/overview.html">Weibull maximum distribution (<code class="docutils literal notranslate"><span class="pre">weibull_max</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/weibull_min/overview.html">Weibull minimum distribution (<code class="docutils literal notranslate"><span class="pre">weibull_min</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/wishart/overview.html">Wishart distribution (<code class="docutils literal notranslate"><span class="pre">wishart</span></code>) — Random scatter / covariance matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/continous/wrapcauchy/overview.html">Wrapped Cauchy distribution (<code class="docutils literal notranslate"><span class="pre">wrapcauchy</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/bernoulli/overview.html">Bernoulli distribution (<code class="docutils literal notranslate"><span class="pre">bernoulli</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/betabinom/overview.html">Beta-Binomial (<code class="docutils literal notranslate"><span class="pre">betabinom</span></code>) Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/betanbinom/overview.html"><code class="docutils literal notranslate"><span class="pre">betanbinom</span></code> (Beta-Negative Binomial)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/binom/overview.html"><code class="docutils literal notranslate"><span class="pre">binom</span></code> (Binomial distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/boltzmann/overview.html">Boltzmann distribution (<code class="docutils literal notranslate"><span class="pre">scipy.stats.boltzmann</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/dirichlet_multinomial/overview.html">Dirichlet–Multinomial Distribution (<code class="docutils literal notranslate"><span class="pre">dirichlet_multinomial</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/dlaplace/overview.html">Discrete Laplace: <code class="docutils literal notranslate"><span class="pre">dlaplace</span></code> (two-sided geometric)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/multinomial/overview.html"><code class="docutils literal notranslate"><span class="pre">multinomial</span></code> (Multinomial distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/nbinom/overview.html"><code class="docutils literal notranslate"><span class="pre">nbinom</span></code> (Negative binomial distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/nchypergeom_fisher/overview.html"><code class="docutils literal notranslate"><span class="pre">nchypergeom_fisher</span></code> (Fisher’s noncentral hypergeometric distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/nchypergeom_wallenius/overview.html"><code class="docutils literal notranslate"><span class="pre">nchypergeom_wallenius</span></code> (Wallenius’ noncentral hypergeometric distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/nhypergeom/overview.html">Negative hypergeometric distribution (<code class="docutils literal notranslate"><span class="pre">nhypergeom</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/planck/overview.html">Planck distribution (<code class="docutils literal notranslate"><span class="pre">planck</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/poisson/overview.html"><code class="docutils literal notranslate"><span class="pre">poisson</span></code> (Poisson distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/poisson_binom/overview.html">Poisson binomial distribution (<code class="docutils literal notranslate"><span class="pre">poisson_binom</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/randint/overview.html">Random integer (discrete uniform) distribution (<code class="docutils literal notranslate"><span class="pre">randint</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/skellam/overview.html"><code class="docutils literal notranslate"><span class="pre">skellam</span></code> (Skellam distribution)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/yulesimon/overview.html">Yule–Simon distribution (<code class="docutils literal notranslate"><span class="pre">yulesimon</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/distributions/01_common_distributions/discret/zipfian/overview.html">Zipfian distribution (<code class="docutils literal notranslate"><span class="pre">zipfian</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/anderson_darling/overview.html">Anderson–Darling Test (Goodness-of-Fit / Normality)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/anova/overview.html">ANOVA (One-Way): Analysis of Variance from Scratch (NumPy)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/bartlett/overview.html">Bartlett’s test (homogeneity of variances)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/bootstrap/overview.html">Bootstrap Hypothesis Testing (from scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/chi_square/overview.html">Chi-square Tests (Goodness-of-Fit &amp; Independence)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/chi_square_goodness_of_fit/overview.html">Chi-square goodness-of-fit test (χ² GOF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/dagostino_k2/overview.html">D’Agostino’s <span class="math notranslate nohighlight">\(K^2\)</span> normality test (<code class="docutils literal notranslate"><span class="pre">dagostino_k2</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/dunnett/overview.html">Dunnett’s Test — Multiple Comparisons vs a Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/fisher_exact/00_overview.html">Fisher’s Exact Test (2×2) — Intuition + NumPy Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/fligner_killeen/overview.html">Fligner–Killeen Test (robust test for equal variances)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/friedman/overview.html">Friedman Test (Nonparametric Repeated-Measures ANOVA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/f_test/overview.html">F-test (Variance Ratio Test)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/jarque_bera/overview.html">Jarque–Bera normality test (<code class="docutils literal notranslate"><span class="pre">jarque_bera</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/kendall_tau/overview.html">Kendall’s Tau (Rank Correlation) — Measure + Hypothesis Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/kolmogorov_smirnov/overview.html">Kolmogorov–Smirnov (KS) test (one-sample + two-sample)</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/kruskal_wallis/overview.html">Kruskal–Wallis H test (one-way ANOVA on ranks) — from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/kurtosis_test/00_overview.html">Kurtosis Test (Anscombe–Glynn)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/levene/overview.html">Levene’s Test (Homogeneity of Variances)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/mann_whitney_u/00_overview.html">Mann–Whitney U Test (Wilcoxon Rank-Sum) — From Scratch with NumPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/odds_ratio/overview.html">Odds Ratio: Interpretation + Hypothesis Test (2×2 tables)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/pearson/overview.html">Pearson correlation test (Pearson’s r)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/permutation_test/overview.html">Permutation Test (Randomization Test)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/skewness_test/overview.html">Skewness Test (D’Agostino)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/spearman/overview.html">Spearman Rank Correlation Test (Spearman’s ρ)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/t_test/overview.html">Student’s t-test (one-sample, paired, two-sample)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/t_test/t_test_independent/overview.html">Independent two-sample t-test (<code class="docutils literal notranslate"><span class="pre">t_test_independent</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/t_test/t_test_paired/overview.html">Paired t-test (<code class="docutils literal notranslate"><span class="pre">ttest_rel</span></code>) — comparing means with paired data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/t_test_one_sample/overview.html">One-sample t-test (Student’s t-test)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/statistics/hypothesis_testing_and_other/wilcoxon_signed_rank/overview.html">Wilcoxon Signed-Rank Test (paired, nonparametric)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../data_science/time_series/00_overview.html">Time Series — Core Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/anomaly_detection/00_overview.html">Time Series Anomaly Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/classification/00_overview.html">Time Series Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/clustering/00_overview.html">Time Series Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/datasets/00_overview.html">Time Series Datasets</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/time_series/forecasting/00_overview.html">Forecasting — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/forecasting/classical/00_overview.html">Forecasting — Classical</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/forecasting/deep_learning/00_overview.html">Forecasting — Deep Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/forecasting/machine_learning/00_overview.html">Forecasting — Machine Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/metrics/00_overview.html">Time Series Forecast Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/pipelines/00_overview.html">Time Series Pipelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../data_science/time_series/regression/00_overview.html">Time Series Regression</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/00_overview.html">sktime Algorithms - Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/catalog/00_overview.html">sktime Algorithms Catalog and Taxonomy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/registry/00_overview.html">sktime Estimator Registry - Full Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/datatypes/00_overview.html">sktime Data Containers &amp; mtypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/model_selection/00_overview.html">sktime Model Selection &amp; Time-Series Cross-Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/clustering/00_overview.html">sktime Time Series Clustering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/anomaly_detection/00_overview.html">sktime Time Series Anomaly Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/segmentation_annotation/00_overview.html">sktime Series Annotation (Anomalies, Change Points, Segmentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/distance_based/00_overview.html">Distance-Based Time Series Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/interval_based/00_overview.html">Interval-Based Time Series Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/dictionary_based/00_overview.html">Dictionary-Based Time Series Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/shapelet_based/00_overview.html">Shapelet-Based Time Series Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/knn_classifier/00_overview.html">KNeighborsTimeSeriesClassifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/rocket_classifier/00_overview.html">RocketClassifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/shapelet_transform_classifier/00_overview.html">ShapeletTransformClassifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/ts_forest_classifier/00_overview.html">TimeSeriesForestClassifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/classification/ensembles/00_overview.html">Ensemble Time Series Classification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/arima/00_overview.html">ARIMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/auto_arima/00_overview.html">AutoARIMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/ets/00_overview.html">ETS (Exponential Smoothing)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/bats_tbats/00_overview.html">BATS/TBATS Forecasting (Multiple Seasonality)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/naive/00_overview.html">Naive Forecasting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/seasonal_naive/00_overview.html">Seasonal Naive Forecasting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/theta/00_overview.html">Theta Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/intermittent_demand/00_overview.html">Intermittent Demand Forecasting (Croston, SBA, TSB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/reduction/00_overview.html">Reduction-Based Forecasting (Tabularization)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/ensembles/00_overview.html">Forecasting Ensembles &amp; Composition in sktime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/strategies/00_overview.html">Forecasting Strategies (Recursive, Direct, Multioutput)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/probabilistic/00_overview.html">Probabilistic Forecasting &amp; Prediction Intervals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/forecasting/backtesting/00_overview.html">Backtesting &amp; Evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/regression/rocket_regressor/00_overview.html">RocketRegressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/regression/knn_regressor/00_overview.html">KNeighborsTimeSeriesRegressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/regression/ts_forest_regressor/00_overview.html">TimeSeriesForestRegressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/regression/interval_based/00_overview.html">Interval-Based Time Series Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/transformers/rocket_transformer/00_overview.html">RocketTransformer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/transformers/preprocessing/00_overview.html">sktime Preprocessing Transformers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/sktime_algorithms/transformers/tsfresh/00_overview.html">TSFreshFeatureExtractor</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../data_science/time_series/transformers/00_overview.html">Time Series Transformers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/transformers/lag_features/00_overview.html">Lag Features for Time Series</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/transformers/rolling_window_features/00_overview.html">Rolling Window Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../data_science/time_series/transformers/fourier_terms/00_overview.html">Fourier Terms for Seasonality</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DevOps</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../00_overview.html">DevOps — Overview</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../ci_cd/00_overview.html">CI/CD</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../CI_CD/argo_cd/00_overview.html">Argo CD (GitOps Continuous Delivery for Kubernetes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../CI_CD/github_actions/00_overview.html">GitHub Actions (CI/CD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../CI_CD/jenkins/00_overview.html">Jenkins (CI/CD)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../iac/00_overview.html">Infrastructure as Code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../IAC/pulumi/00_overview.html">Pulumi (Infrastructure as Code with real languages)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../IAC/terraform/00_overview.html">Terraform (Infrastructure as Code)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloudformation/00_overview.html">AWS CloudFormation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloudfront/00_overview.html">AWS CloudFront</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloudwatch/00_overview.html">Amazon CloudWatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamodb/00_overview.html">Amazon DynamoDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ec2/00_overview.html">Amazon EC2 (Elastic Compute Cloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ecs/00_overview.html">Amazon ECS (Elastic Container Service)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eks/00_overview.html">Amazon EKS (Elastic Kubernetes Service)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Amazon ElastiCache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emr/00_overview.html">Amazon EMR (Elastic MapReduce)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventbridge/00_overview.html">Amazon EventBridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glue/00_overview.html">AWS Glue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lambda/00_overview.html">AWS Lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mwaa/00_overview.html">AWS Managed Workflows for Apache Airflow (MWAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rds/00_overview.html">Amazon RDS (Relational Database Service)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../s3/00_overview.html">Amazon S3 (Simple Storage Service)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snowflake/00_overview.html">Snowflake (Cloud Data Platform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sns/00_overview.html">Amazon SNS (Simple Notification Service)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sqs/00_overview.html">Amazon SQS (Simple Queue Service)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../step_functions/00_overview.html">AWS Step Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vpc/00_overview.html">Amazon VPC (Virtual Private Cloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_assets/aws_service_icons/README.html">AWS service icons</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../containers/00_overview.html">Containers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../containerisation/docker/00_overview.html">Docker (Containerisation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../containerisation/podman/00_overview.html">Podman (Containerisation)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cost_capacity/00_overview.html">Cost &amp; Capacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../incident_response/00_overview.html">Incident Response</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../kubernetes/00_overview.html">Kubernetes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/config_maps/00_overview.html">ConfigMaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/cron_jobs/00_overview.html">CronJobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/deployments/00_overview.html">Deployments (Stateless workloads)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/hpa/00_overview.html">HPA (Horizontal Pod Autoscaler)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/ingress/00_overview.html">Ingress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/jobs/00_overview.html">Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/kustomize/00_overview.html">Kustomize (manage YAML at scale)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/namespaces/00_overview.html">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/persistent_volume_claims/00_overview.html">Persistent Volumes (PV) &amp; PersistentVolumeClaims (PVC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/pods/00_overview.html">Pods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/replica_sets/00_overview.html">ReplicaSets (Replicas)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/secrets/00_overview.html">Secrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/services/00_overview.html">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/stateful_sets/00_overview.html">StatefulSets (Stateful workloads)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../kubernetes/storage_classes/00_overview.html">StorageClasses</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../observability_sre/00_overview.html">Observability &amp; SRE</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../telemetry_and_display/00_overview.html">Telemetry &amp; Display (Observability)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../telemetry_and_display/elasticsearch/00_overview.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../telemetry_and_display/grafana/00_overview.html">Grafana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../telemetry_and_display/kibana/00_overview.html">Kibana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../telemetry_and_display/logstash/00_overview.html">Logstash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../telemetry_and_display/prometheus/00_overview.html">Prometheus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Finance</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../finance/00_overview.html">Finance — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../finance/derivatives/00_overview.html">Derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../finance/derivatives/black_scholes/00_overview.html">Black-Scholes Option Pricing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../finance/econometrics/00_overview.html">Financial Econometrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../finance/fixed_income/00_overview.html">Fixed Income</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../finance/portfolio/00_overview.html">Portfolio Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../finance/portfolio/efficient_frontier/00_overview.html">Efficient Frontier (Mean-Variance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../finance/portfolio/fama_french/00_overview.html">Fama-French Factor Model (Toy Example)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../finance/risk/00_overview.html">Risk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../finance/time_value_of_money/00_overview.html">Time Value of Money</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Frontend</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../frontend/00_overview.html">Frontend — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/frameworks_architecture/00_overview.html">Frameworks &amp; Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/performance_accessibility/00_overview.html">Performance &amp; Accessibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/security/00_overview.html">Frontend Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/state_data/00_overview.html">State &amp; Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/testing/00_overview.html">Frontend Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../frontend/web_fundamentals/00_overview.html">Web Fundamentals</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Design</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../system_design/00_overview.html">System Design — Overview</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/case_studies/00_overview.html">Case Studies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/data_consistency/00_overview.html">Consistency Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/design_checklists/00_overview.html">Design Checklists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/reliability_dr/00_overview.html">Reliability &amp; DR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/requirements_tradeoffs/00_overview.html">Requirements &amp; Tradeoffs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../system_design/scalability_patterns/00_overview.html">Scalability Patterns</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/devops/cloud/aws/elasticache/00_overview.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Amazon ElastiCache</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elasticache-is">What ElastiCache is</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-is-practically-used-for">What it is practically used for</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-elasticache-with-the-aws-sdk-pseudo-code">Using ElastiCache with the AWS SDK (pseudo-code)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="amazon-elasticache">
+<h1>Amazon ElastiCache<a class="headerlink" href="#amazon-elasticache" title="Permalink to this heading">#</a></h1>
+<img src="../_assets/aws_service_icons/elasticache.svg" width="80" alt="Amazon ElastiCache">
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explain what ElastiCache is</p></li>
+<li><p>Explain what it is practically used for</p></li>
+<li><p>Show a simple pseudo-code example using the AWS SDK</p></li>
+</ul>
+</section>
+<section id="what-elasticache-is">
+<h2>What ElastiCache is<a class="headerlink" href="#what-elasticache-is" title="Permalink to this heading">#</a></h2>
+<p><strong>Amazon ElastiCache</strong> is AWS’s fully managed <strong>in-memory data store</strong> service. It provides managed deployments of:</p>
+<ul class="simple">
+<li><p><strong>Redis</strong> (including replication groups, clustering, persistence options, and high availability features)</p></li>
+<li><p><strong>Memcached</strong> (simple, multi-node, in-memory caching)</p></li>
+</ul>
+<p>AWS manages provisioning, patching, monitoring, scaling operations, and integrates with VPC networking/security (subnets, security groups).</p>
+</section>
+<section id="what-it-is-practically-used-for">
+<h2>What it is practically used for<a class="headerlink" href="#what-it-is-practically-used-for" title="Permalink to this heading">#</a></h2>
+<p>ElastiCache is used when you want <strong>very low-latency reads/writes</strong> (often sub-millisecond) for <strong>non-primary</strong> data that is:</p>
+<ul class="simple">
+<li><p><strong>Derived</strong> from another source (e.g., database query results)</p></li>
+<li><p><strong>Temporary</strong> (e.g., sessions)</p></li>
+<li><p><strong>Fast-moving</strong> (e.g., counters, leaderboards)</p></li>
+</ul>
+<p>Common practical use cases and patterns:</p>
+<ul class="simple">
+<li><p><strong>Cache-aside</strong> (a.k.a. lazy loading): read from cache first; on miss, read from DB and populate cache with a TTL</p></li>
+<li><p><strong>Session store</strong> for web apps (especially for horizontally scaled stateless app servers)</p></li>
+<li><p><strong>Rate limiting / throttling</strong> (atomic counters)</p></li>
+<li><p><strong>Leaderboards &amp; real-time metrics</strong> (sorted sets, counters)</p></li>
+<li><p><strong>Pub/Sub and lightweight queues</strong> (Redis features)</p></li>
+<li><p><strong>ML/serving</strong>: cache features, embeddings, and inference responses to reduce latency and backend load</p></li>
+</ul>
+</section>
+<section id="using-elasticache-with-the-aws-sdk-pseudo-code">
+<h2>Using ElastiCache with the AWS SDK (pseudo-code)<a class="headerlink" href="#using-elasticache-with-the-aws-sdk-pseudo-code" title="Permalink to this heading">#</a></h2>
+<p>The <strong>AWS SDK</strong> is typically used to <strong>provision and manage</strong> ElastiCache resources and to <strong>discover endpoints</strong>. To actually read/write cached values you connect to the Redis/Memcached endpoint using a <strong>protocol client</strong> (Redis or Memcached library).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PSEUDO-CODE (do not run)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">boto3</span>
+<span class="c1"># from redis import Redis  # example protocol client library</span>
+
+<span class="c1"># 1) Use the AWS SDK to discover your cache endpoint (example: Redis replication group)</span>
+<span class="n">elasticache</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s2">&quot;elasticache&quot;</span><span class="p">,</span> <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">elasticache</span><span class="o">.</span><span class="n">describe_replication_groups</span><span class="p">(</span>
+    <span class="n">ReplicationGroupId</span><span class="o">=</span><span class="s2">&quot;my-redis-rg&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;ReplicationGroups&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;NodeGroups&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;PrimaryEndpoint&quot;</span><span class="p">]</span>
+<span class="n">redis_host</span> <span class="o">=</span> <span class="n">primary</span><span class="p">[</span><span class="s2">&quot;Address&quot;</span><span class="p">]</span>
+<span class="n">redis_port</span> <span class="o">=</span> <span class="n">primary</span><span class="p">[</span><span class="s2">&quot;Port&quot;</span><span class="p">]</span>
+
+<span class="c1"># 2) Connect to Redis (must have network access to the VPC/subnets/security group)</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">,</span> <span class="n">ssl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+
+<span class="c1"># 3) Use a common pattern: cache-aside</span>
+<span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;user_profile:</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">query_user_profile</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">ex</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>  <span class="c1"># TTL (seconds)</span>
+
+<span class="k">return</span> <span class="n">value</span>
+</pre></div>
+</div>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ElastiCache is commonly deployed <strong>inside a VPC</strong>; access is controlled by <strong>subnets + security groups</strong>.</p></li>
+<li><p>Use <strong>TTLs</strong> and an invalidation strategy that matches your freshness requirements.</p></li>
+<li><p>For higher availability with Redis, use <strong>replication groups</strong> with <strong>Multi-AZ</strong> and automatic failover.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./devops/cloud/aws/elasticache"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../eks/00_overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Amazon EKS (Elastic Kubernetes Service)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../emr/00_overview.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Amazon EMR (Elastic MapReduce)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elasticache-is">What ElastiCache is</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-is-practically-used-for">What it is practically used for</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-elasticache-with-the-aws-sdk-pseudo-code">Using ElastiCache with the AWS SDK (pseudo-code)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

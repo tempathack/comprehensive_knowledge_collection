@@ -1,0 +1,32 @@
+# Jupyter Book configuration
+
+title: Knowledge Archive
+
+execute:
+  execute_notebooks: cache
+  timeout: 300
+  allow_errors: true
+
+only_build_toc_files: true
+
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - amsmath
+
+sphinx:
+  extra_extensions:
+    - sphinx.ext.mathjax
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_static_path:
+      - _static
+    html_js_files:
+      - plotly.min.js
+    exclude_patterns:
+      - "**/.ipynb_checkpoints"
+      - "**/.DS_Store"
+      - "_build"
+      - "**/_build"
+      - "**/.jupyter_cache"
+      - "old/**"
