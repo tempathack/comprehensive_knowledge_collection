@@ -1,0 +1,42 @@
+# Jupyter Book configuration
+
+title: Knowledge Archive
+
+execute:
+  execute_notebooks: cache
+  timeout: 300
+  allow_errors: true
+  run_in_temp: false
+
+only_build_toc_files: true
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    # NOTE: dollarmath can conflict with Plotly rendering on the same page
+    # If Plotly figures don't show, try removing dollarmath from pages with plots
+    - dollarmath
+
+sphinx:
+  extra_extensions:
+    - sphinx.ext.mathjax
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_static_path:
+      - _static
+    html_js_files:
+      # require.js is needed for Plotly to work in Jupyter Book
+      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    # Suppress warning about unknown mime types (e.g., Plotly HTML output)
+    suppress_warnings:
+      - mystnb.unknown_mime_type
+    exclude_patterns:
+      - "**/.ipynb_checkpoints"
+      - "**/.DS_Store"
+      - "_build"
+      - "**/_build"
+      - "**/.jupyter_cache"
+      - "old/**"
+
+launch_buttons:
+  notebook_interface: "classic"
